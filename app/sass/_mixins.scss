@@ -1,0 +1,122 @@
+/* миксины*/
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+/*Наследование*/
+%clearfix {
+  &::before, &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin container() {
+  width: $desktop-inner-width; //1170
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and #{($laptop-point-widths-des)}{
+    width: $laptop-inner-widths; //950
+  }
+  @media screen and #{($tablet-point-widths-des)} {
+    width: $tablet-inner-widths; //768
+    padding: 0 20px;
+  }
+  @media screen and #{($phone-point-widths-des)} {
+    width: $phone-inner-widths; //300
+    padding: 0 10px;
+  }
+}
+@mixin container-fluid() {
+  max-width: $desktop-max-widths; //1200
+  margin: 0 auto;
+  padding: 0 1.25%;
+
+  @media screen and #{($laptop-point-widths-des)}{
+    max-width: $laptop-max-widths; //992
+  }
+  @media screen and #{($tablet-point-widths-des)} {
+    max-width: $tablet-max-widths; //768
+    padding: 0 2.5%;
+  }
+  @media screen and #{($phone-point-widths-des)} {
+    max-width: $phone-max-widths; //300
+    padding: 0 2%;
+  }
+}
+@mixin ul-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin inline-block($valign: top) {
+  display: inline-block;
+  vertical-align: $valign;
+}
+
+@mixin visually-hidden  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@mixin visually-view  {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  border: auto;
+  clip: none;
+  overflow: auto;
+}
+@function em($target, $context: $font-size-base) {
+ @if $target == 0 {
+   @return 0;
+ }
+ @return $target / $context + em;
+}
+
+@media #{$retina} {
+  .selector {
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin placeholder($color: #000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+@mixin cover() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
