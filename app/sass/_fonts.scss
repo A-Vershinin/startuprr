@@ -1,48 +1,49 @@
 
 /* Шрифты */
-/* font-family: "RobotoRegular"; */
+/* font-family: "RalewayRegular"; */
 @font-face {
-	font-family: "RobotoRegular";
-	src: url("../fonts/RobotoRegular/roboto-regular.woff") format("woff"),
-	url("../fonts/RobotoRegular/roboto-regular.woff2") format("woff2");
+	font-family: "RalewayRegular";
+	src: url("../fonts/RalewayRegular/raleway-regular.woff") format("woff"),
+	url("../fonts/RalewayRegular/raleway-regular.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
-/* font-family: "RobotoMedium"; */
+/* font-family: "RalewayMedium"; */
 @font-face {
-	font-family: "RobotoMedium";
-	src: url("../fonts/RobotoMedium/roboto-medium.woff") format("woff"),
-	url("../fonts/RobotoMedium/roboto-medium.woff2") format("woff2");
+	font-family: "RalewayMedium";
+	src: url("../fonts/RalewayMedium/raleway-medium.woff") format("woff"),
+	url("../fonts/RalewayMedium/raleway-medium.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
-/* font-family: "RobotoBold"; */
+/* font-family: "RalewayBold"; */
 @font-face {
-	font-family: "RobotoBold";
-	src: url("../fonts/RobotoBold/roboto-bold.woff") format("woff"),
-	url("../fonts/RobotoBold/roboto-bold.woff2") format("woff2");
+	font-family: "RalewayBold";
+	src: url("../fonts/RalewayBold/raleway-bold.woff") format("woff"),
+	url("../fonts/RalewayBold/raleway-bold.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "RalewayExtraBold"; */
+@font-face {
+	font-family: "RalewayExtraBold";
+	src: url("../fonts/RalewayExtraBold/raleway-extrabold.woff") format("woff"),
+	url("../fonts/RalewayExtraBold/raleway-extrabold.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
 
-
-@mixin Roboto($style: "regular") {
+@mixin Raleway($style: "regular") {
 	@if ($style == "regular") {
-		font-family: "RobotoRegular";
+		font-family: "RalewayRegular";
 		}
 	@else if ($style == "medium") {
-		font-family: "RobotoMedium";
+		font-family: "RalewayMedium";
 	}
 	@else if($style == "bold") {
-		font-family: "RobotoBold";
+		font-family: "RalewayBold";
 	}
-}
-
-@mixin openSans($style: "bold") {
-	@if ($style == "bold") {
-		font-family: "OpenSansBold";
-		}
-	@else if($style == "semiBold") {
-		font-family: "OpenSansSemibold";
+	@else if($style == "extrabold") {
+		font-family: "RalewayExtraBold";
 	}
 }
