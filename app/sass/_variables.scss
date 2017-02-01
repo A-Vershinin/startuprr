@@ -7,7 +7,7 @@ $raleway-extrabold: "RalewayExtraBold", "Arial", sans-serif;
 
 /*Цвета, фон*/
 $accent: #3498db;
-// $accent-hover: #1C4D4D;
+$accent-active: #45687F;
 
 $gray-1: #7a7a7a;
 $gray-2: #8a8a8a;
@@ -16,7 +16,7 @@ $gray-4: #383838;
 $gray-5: #e4e4e4;
 $gray-6: #aaa;
 
-$blue-1: #3498db;
+// $blue-1: #3498db;
 
 //shadows, borders, rgba, other
 $light-1: #dedede;
@@ -52,13 +52,13 @@ $tablet-point-widths-des: "(max-width: 768px)";
 $phone-point-widths-des: "(max-width: 520px)";
 
 /*макс-ширина на устройствах*/
-$desktop-max-widths: 1200px;
+$desktop-max-widths: 1170px;
 $laptop-max-widths: 992px;
 $tablet-max-widths: 768px;
 $phone-max-widths: 480px;
 
 /*мин-ширина на устройствах*/
-$desktop-min-widths: 1200px;
+$desktop-min-widths: 1170px;
 $laptop-min-widths: 992px;
 $tablet-min-widths: 768px;
 $phone-min-widths: 480px;
