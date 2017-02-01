@@ -1,39 +1,41 @@
 /*Переменные*/
 /*Шрифты*/
-$roboto-regular: "RobotoRegular", "Arial", sans-serif;
-$roboto-medium: "RobotoMedium", "Arial", sans-serif;
-$roboto-bold: "RobotoBold", "Arial", sans-serif;
+$raleway-regular: "RalewayRegular", "Arial", sans-serif;
+$raleway-medium: "RalewayMedium", "Arial", sans-serif;
+$raleway-bold: "RalewayBold", "Arial", sans-serif;
+$raleway-extrabold: "RalewayExtraBold", "Arial", sans-serif;
 
 /*Цвета, фон*/
-$accent: #49cbcd;
-$accent-2: #49cbcd;
-$accent-hover: #1C4D4D;
-$gray-1: #4e525d;
-$gray-2: #788492;
-$gray-3: #c1c1c1;
-$gray-3: #485460;
-$gray-4: #8c9299;
+$accent: #3498db;
+// $accent-hover: #1C4D4D;
 
+$gray-1: #7a7a7a;
+$gray-2: #8a8a8a;
+$gray-3: #606060;
+$gray-4: #383838;
+$gray-5: #e4e4e4;
+$gray-6: #aaa;
+
+$blue-1: #3498db;
 
 //shadows, borders, rgba, other
-$light-1: #ffffff;
-$light-2: #ecf0f1;
-$light-3: #e4b671;
-$light-4: #bface2;
-$green-1: #8cc34b;
-$blue-1: #03a9f4;
+$light-1: #dedede;
+$light-2: #e4e4e4;
+$light-3: #ffffff;
+// $light-4: #bface2;
+// $green-1: #8cc34b;
+// $blue-1: #03a9f4;
 
 //background-colors:
 $bg-1: #fff;
-$bg-2: #f8f9fb;
-$bg-3: #eeeef0;
-$bg-4: #f1f1f1;
-$bg-5: #181818;
-$bg-6: #3b5997;
-$bg-7: #3ec2f3;
-$bg-8: #e44c41;
-
-
+$bg-2: #383838;
+$bg-3: #f9f9f9;
+$bg-4: rgba(52, 152, 219, 0.78);
+$bg-5: #333;
+$bg-6: rgba(255, 255, 255, .7);
+$bg-7: rgba(255, 255, 255, .4);
+$bg-gradient: linear-gradient(to right, #f9f9f9 0%, transparent 20%,
+                              transparent 50%, transparent 80%, #f9f9f9 100%);
 /*размер шрифта*/
 $font-size-base: 16px;
 $lin-height-base: 24px/$font-size-base;

@@ -80,6 +80,9 @@
   clip: none;
   overflow: auto;
 }
+@mixin font-size-rem($size) {
+  font-size: $size / 16 + rem;
+}
 @function em($target, $context: $font-size-base) {
  @if $target == 0 {
    @return 0;

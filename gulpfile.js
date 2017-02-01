@@ -139,6 +139,7 @@ gulp.task("svg-symbols", function() {
       inlineSvg: true
     }))
     .pipe(rename("svg-symbols.svg"))
+    .pipe(gulp.dest("app/img"))
     .pipe(gulp.dest("build/img"));
 });
 // Копируем favicons
