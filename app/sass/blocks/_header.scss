@@ -7,6 +7,9 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  @media #{$retina} {
+    background-image: url("../img/bg/bg-header@2x.jpg");
+  }
 }
 .header__block {
   max-width: 630px;
