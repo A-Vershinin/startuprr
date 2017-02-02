@@ -11,7 +11,8 @@
       fill: $accent;
     }
     .search__form {
-      opacity: 1;
+      // opacity: 1;
+      display: block;
     }
     .search__form-wrap {
       top: 74px;
@@ -31,18 +32,20 @@
     position: absolute;
     top: -50px;
     right: 0;
-    width: 38px;
-    height: 100px;
+    width: 40px;
+    height: 55px;
     background-color: #ccc;
     opacity: 0;
+    // display: none;
   }
 }
 .search__form {
+  display: none;
   margin: 0;
   width: 320px;
   padding: 15px;
   background-color: rgba(52, 152, 219, .2);
-  opacity: 0;
+  // opacity: 0;
   transition: .4s ease;
 }
 .search__form input {
@@ -68,12 +71,12 @@
   }
 }
 
-@media screen and #{($laptop-point-widths-des)} {
-  .menu--opend {
+@media screen and #{($tablet-point-widths-des)} {
+  .menu--opened {
     .search {
       position: absolute;
       top: 335px;
-      left: -443px;
+      left: -384px;
       &:hover {
         .search__form-wrap {
           top: 44px;
@@ -81,8 +84,8 @@
       }
     }
     .search__form-wrap {
-      top: 42px;
-      right: -246px;
+      top: 80px;
+      right: -260px;
       &:before {
         right: 0;
         top: -40px;

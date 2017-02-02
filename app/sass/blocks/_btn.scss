@@ -1,0 +1,28 @@
+.btn {
+  position: relative;
+  @include inline-block($valign: top);
+  padding: 4px 10px;
+  @include font-size-rem(10);
+  line-height: 29px;
+  font-family: $raleway-extrabold;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $gray-2;
+  background-color: transparent;
+  border: 1px solid $light-2;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: 0;
+  transition: .4s ease;
+  &:hover {
+    color: $light-2;
+    background-color: $accent;
+  }
+  &:active {
+    color: $light-2;
+    background-color: $accent-active;
+  }
+}
