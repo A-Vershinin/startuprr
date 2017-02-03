@@ -3,6 +3,7 @@
   "dependencies": {
     "normalize-css": "^5.0.0",
     "picturefill": "^3.0.2",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "jquery.easy-pie-chart": "^2.1.6"
   }
 }
