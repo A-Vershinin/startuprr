@@ -1,7 +1,5 @@
 .skills {
   position: relative;
-  margin-bottom: 300px;
-  min-height: 400px;
   color: $gray-1;
   background-color: $bg-2;
 }
@@ -104,6 +102,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-bottom: 70px;
 }
 .skill__item {
   text-align: center;
