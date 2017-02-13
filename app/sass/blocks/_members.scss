@@ -1,7 +1,6 @@
 .members {
   position: relative;
-  margin-bottom: 100px;
-  margin-bottom: 300px;
+  margin-bottom: 105px;
   background-color: $bg-3;
 }
 .members__header {
@@ -94,13 +93,16 @@
 }
 .members__list {
   @include ul-reset;
+  @extend %clearfix;
   display: flex;
   justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
 }
 .members__item {
   position: relative;
   width: 23%;
+  // max-width: 23%;
   text-align: center;
   border: 1px solid #dedede;
   border-radius: 5px;
@@ -111,6 +113,7 @@
     .members__overlay {
       opacity: 1;
       border-radius: 5px;
+      transition: opacity .4s ease;
     }
     .members__item-name {
       background-color: $bg-2

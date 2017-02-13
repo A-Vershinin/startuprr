@@ -14,20 +14,15 @@
   background-color: $accent;
   border-radius: 3px;
   svg {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    transform: rotate(-45deg);
     fill: #fff;
   }
 }
-.skills-sec__icon {
+.skills__sec-icon {
   position: absolute;
   z-index: 30;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transform: rotate(-30deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .skills__header {
   position: relative;

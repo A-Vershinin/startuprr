@@ -6,10 +6,10 @@
 }
 .facts__sec-pict {
   position: absolute;
-  top: -27px;
+  top: 0;
   left: 50%;
   z-index: 40;
-  transform: translateX(-50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   width: 54px;
   height: 54px;
   background-color: $accent;
@@ -18,7 +18,9 @@
     position: absolute;
     top: -18px;
     left: -17px;
-    transform: rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
     fill: #fff;
   }
 }
@@ -101,11 +103,14 @@
   @include ul-reset;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   padding-bottom: 75px;
 }
 .facts__item {
+  position: relative;
   width: 22.5%;
-  margin-left: 2.5%;
+  width: 23%;
+  // margin-left: 2.5%;
   text-align: center;
   background-color: transparent;
   &:first-child {
@@ -121,7 +126,8 @@
 }
 .facts__number {
   position: relative;
-  margin: 0 40px 30px 40px;
+  display: block;
+  margin-bottom: 30px;
   text-align: center;
   color: $gray-5;
   font-family: $raleway-medium;
@@ -129,11 +135,13 @@
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
+  box-sizing: border-box;
   &:before, &:after {
     content: "";
     position: absolute;
     top: 50%;
     left: 0;
+    left: 25px;
     transform: translateY(-50%);
     transform: rotate(45deg);
     display: block;
@@ -144,6 +152,7 @@
   &:after {
     left: auto;
     right: 0;
+    right: 25px;
   }
 }
 .facts__number-icon {

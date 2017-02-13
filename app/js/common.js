@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (document.body.className == "no-js") {
         document.body.classList.remove("no-js");
       }
-    };
+    }
     //menu
     mobileMenu();
     function mobileMenu() {
@@ -60,10 +60,42 @@ document.addEventListener("DOMContentLoaded", function() {
       // });
       // chart.enableAnimation();
     }
-
+    // members();
+    function members() {
+      $(".members__list").owlCarousel({
+        loop: true,
+        items: 4,
+        // itemElement: "members__item",
+        // stageElement: "",
+        // navContainer: "members__arrows",
+        // stageElement:'members__list',
+        // itemElement:'members__item',
+        margin: 30,
+        // center: true,
+        nav: true,
+        // navigation: true,
+        dots: false,
+        // autoplay: true,
+        autoplaySpeed: 1700,
+        navSpeed: 1700,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          }
+          // 600:{
+          //   items:2
+          // },
+          // 1000:{
+          //   items:3
+          // }
+        },
+      });
+    }
 
 
     console.log("JS active");
+
 
   })();
 });
