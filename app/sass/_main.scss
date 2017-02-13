@@ -50,6 +50,7 @@ a:link {
   // color: $light-1;
 }
 img, video {
+  display: block;
   max-width: 100%;
   object-fit: cover;
   height: auto;

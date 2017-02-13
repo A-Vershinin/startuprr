@@ -1,0 +1,33 @@
+.socials {
+  @include ul-reset();
+  font-size: 0;
+}
+.socials__item {
+  position: relative;
+  @include inline-block($valign: top);
+  @include font-size-rem(16);
+  background-color: $gray-5;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  transition: .3s ease;
+}
+.socials__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    fill: $accent;
+  }
+  &:hover {
+    background-color: $gray-4;
+    border-radius: 4px;
+    & svg {
+      fill: #fff;
+    }
+  }
+}

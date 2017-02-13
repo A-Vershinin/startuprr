@@ -25,8 +25,8 @@
   border-radius: 3px;
   svg {
     position: absolute;
-    top: -13px;
-    left: -17px;
+    top: 13px;
+    left: -10px;
     transform: rotate(-12deg);
     fill: #fff;
   }
@@ -34,9 +34,11 @@
 .features-sec__icon {
   position: absolute;
   z-index: 30;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // top: 50%;
+  // left: 50%;
+  top: 5px;
+  left: 5px;
+  // transform: translate(-50%, -50%);
   transform: rotate(-30deg);
 }
 .features__header {

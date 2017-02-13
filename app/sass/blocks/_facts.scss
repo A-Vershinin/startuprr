@@ -1,6 +1,5 @@
 .facts {
   position: relative;
-  margin-bottom: 200px;
 }
 .facts__top {
   background-color: $bg-2;
@@ -17,7 +16,7 @@
   border-radius: 3px;
   svg {
     position: absolute;
-    top: -16px;
+    top: -18px;
     left: -17px;
     transform: rotate(-45deg);
     fill: #fff;
@@ -113,6 +112,13 @@
     margin-left: 0;
   }
 }
+.facts__item:hover {
+  .facts__number {
+    &:before, &:after {
+      background-color: $accent;
+    }
+  }
+}
 .facts__number {
   position: relative;
   margin: 0 40px 30px 40px;
@@ -128,7 +134,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateZ(-50%);
+    transform: translateY(-50%);
     transform: rotate(45deg);
     display: block;
     width: 14px;
@@ -138,11 +144,6 @@
   &:after {
     left: auto;
     right: 0;
-  }
-  &:hover {
-    &:before, &:after {
-      background-color: $accent;
-    }
   }
 }
 .facts__number-icon {
@@ -179,7 +180,6 @@
 }
 .facts__bottom-left {
   max-width: 650px;
-  width: 50%;
   float: left;
   color: $gray-5;
   font-family: $raleway-extrabold;
@@ -190,7 +190,6 @@
 }
 .facts__bottom-right {
   float: right;
-  width: 50%;
   text-align: right;
   font-size: 0;
 }
