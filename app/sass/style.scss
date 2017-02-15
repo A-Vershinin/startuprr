@@ -1,15 +1,15 @@
-/* подключаем все кусочки кодов в главный файл*/
+// подключаем все кусочки кодов в главный файл//
 
 
-/* Переменные и миксины*/
+// Переменные и миксины//
 @import "_variables.scss";
 @import "_mixins.scss";
 
-/* Глобальные стили для всего проекта*/
+// Глобальные стили для всего проекта//
 @import "_fonts.scss";
 @import "_main.scss";
 
-/* Стили BEM-блоков*/
+//Стили BEM-блоков//
 // index.html
 @import "blocks/_wrapper.scss";
 @import "blocks/_container.scss";
@@ -27,6 +27,8 @@
 @import "blocks/_members.scss";
 @import "blocks/_socials.scss";
 @import "blocks/_feedback.scss";
+@import "blocks/_brands.scss";
+@import "blocks/_prices.scss";
 @import "blocks/_footer.scss";
 
 

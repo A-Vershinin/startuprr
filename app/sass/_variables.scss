@@ -1,11 +1,11 @@
-/*Переменные*/
-/*Шрифты*/
+//Переменные//
+//Шрифты//
 $raleway-regular: "RalewayRegular", "Arial", sans-serif;
 $raleway-medium: "RalewayMedium", "Arial", sans-serif;
 $raleway-bold: "RalewayBold", "Arial", sans-serif;
 $raleway-extrabold: "RalewayExtraBold", "Arial", sans-serif;
 
-/*Цвета, фон*/
+//Цвета, фон//
 $accent: #3498db;
 $accent-active: #45687F;
 
@@ -17,6 +17,7 @@ $gray-5: #e4e4e4;
 $gray-6: #aaa;
 
 $blue-1: #3498db;
+$blue-2: #00a99d;;
 
 //shadows, borders, rgba, other
 $light-1: #dedede;
@@ -37,38 +38,38 @@ $bg-9: rgba(52, 152, 219, 0.4);
 
 $bg-gradient: linear-gradient(to right, #f9f9f9 0%, transparent 20%,
   transparent 50%, transparent 80%, #f9f9f9 100%);
-/*размер шрифта*/
+//размер шрифта//
 $font-size-base: 16px;
 $lin-height-base: 24px/$font-size-base;
 
-/*брейкпоинты*/
-/*Mobile*/
+//брейкпоинты//
+//Mobile//
 $desktop-point-widths: "(min-width: 1200px)";
 $laptop-point-widths: "(min-width: 868px)";
 $tablet-point-widths: "(min-width: 520px)";
-/*Desktop*/
+//Desktop//
 $desktop-point-widths-des: "(max-width: 1200px)";
 $laptop-point-widths-des: "(max-width: 992px)";
 $tablet-point-widths-des: "(max-width: 768px)";
 $phone-point-widths-des: "(max-width: 520px)";
 
-/*макс-ширина на устройствах*/
+//макс-ширина на устройствах//
 $desktop-max-widths: 1170px;
 $laptop-max-widths: 992px;
 $tablet-max-widths: 768px;
 $phone-max-widths: 480px;
 
-/*мин-ширина на устройствах*/
+//мин-ширина на устройствах//
 $desktop-min-widths: 1170px;
 $laptop-min-widths: 992px;
 $tablet-min-widths: 768px;
 $phone-min-widths: 480px;
 
-/*ширины контейнера*/
+//ширины контейнера//
 $desktop-inner-width: 1170px;
 $laptop-inner-widths: 950px;
 $tablet-inner-widths: 740px;
 $phone-inner-widths: 300px;
 
-/*Ретина*/
+//Ретина//
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

@@ -1,4 +1,4 @@
-/* миксины*/
+//* миксины*//
 @mixin clearfix() {
   &::before,
   &::after {
@@ -7,7 +7,7 @@
     clear: both;
   }
 }
-/*Наследование*/
+//*Наследование*//
 %clearfix {
   &::before, &::after {
     content: "";

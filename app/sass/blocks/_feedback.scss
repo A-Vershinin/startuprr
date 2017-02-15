@@ -1,6 +1,5 @@
 .feedback {
   position: relative;
-  margin-bottom: 300px;
   background-color: $accent;
   // min-height: 310px;
 }
@@ -33,6 +32,10 @@
 }
 .feedback__list {
   @include ul-reset();
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
 .feedback__block {
   position: relative;
@@ -40,6 +43,7 @@
   padding-bottom: 80px;
 }
 .feedback__item {
+  width: 100%;
   position: relative;
   text-align: center;
   padding-bottom: 25px;
@@ -103,7 +107,7 @@
   z-index: 60;
   cursor: pointer;
 }
-.feedback__arrow-left {
+.feedback__arrow-prev {
   position: absolute;
   left: 47%;
   width: 30px;
@@ -126,7 +130,7 @@
     border-right: 12px solid $accent;
   }
 }
-.feedback__arrow-right {
+.feedback__arrow-next {
   position: absolute;
   right: 47%;
   width: 30px;

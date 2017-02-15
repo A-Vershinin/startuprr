@@ -113,13 +113,14 @@
   display: inline-block;
   vertical-align: top;
   @include ul-reset();
+
 }
 .features__item {
   @extend %clearfix;
   min-height: 100px;
   width: 100%;
   margin-bottom: 60px;
-  text-align: center;
+  text-align: left;
 }
 .features__item-left {
   float: left;

@@ -92,6 +92,23 @@ document.addEventListener("DOMContentLoaded", function() {
         },
       });
     }
+    // feedback();
+    function feedback() {
+      $(".feedback__list").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 3000,
+        arrows: true,
+        autoplay: true,
+        autoplay: 3000,
+        autoplaySpeed: 2500,
+        adaptiveHeight: true,
+        lazyLoad: "progressive"
+        // prevArrow: ".feedback__arrow-left",
+        // nextArrow: "feedback__arrow-next"
+      });
+    }
 
 
     console.log("JS active");

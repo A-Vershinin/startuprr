@@ -81,9 +81,9 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("app/sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
-  gulp.watch("app/js/*.js", ["JsChange"]);  //Наблюдение за js файлами в папке проекта
-  gulp.watch("app/*.html", ["htmlChange"]); //Наблюдение за html файлами в папке проекта
+  gulp.watch("app/sass/**/*.{scss,sass}", ["style", "useref"]);  //Наблюдение за scss файлами в папке scss
+  gulp.watch("app/js/*.js", ["JsChange", "useref"]);  //Наблюдение за js файлами в папке проекта
+  gulp.watch("app/*.html", ["htmlChange", "useref"]); //Наблюдение за html файлами в папке проекта
   gulp.watch("build/**/*").on("change", server.reload);
 });
 // ====================================================

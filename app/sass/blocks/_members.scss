@@ -93,16 +93,13 @@
 }
 .members__list {
   @include ul-reset;
-  @extend %clearfix;
   display: flex;
   justify-content: space-between;
-  justify-content: space-around;
   flex-direction: row;
 }
 .members__item {
   position: relative;
-  width: 23%;
-  // max-width: 23%;
+  max-width: 23%;
   text-align: center;
   border: 1px solid #dedede;
   border-radius: 5px;

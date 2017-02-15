@@ -89,8 +89,7 @@
 .works__list {
   @include ul-reset();
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }

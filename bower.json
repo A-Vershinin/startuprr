@@ -5,7 +5,8 @@
     "picturefill": "^3.0.2",
     "animate.css": "^3.5.2",
     "jquery.easy-pie-chart": "^2.1.6",
-    "owl.carousel": "^2.2.0"
+    "owl.carousel": "^2.2.0",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "owl.carousel": "^2.2.0",
