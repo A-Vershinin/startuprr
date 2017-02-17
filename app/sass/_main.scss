@@ -10,6 +10,7 @@ body {
   font-weight: 400;
   color: $gray-1;
   background-color: $bg-1;
+  -webkit-overflow-scrolling: touch;
 }
 input, textarea {
   color: $gray-1;
@@ -51,7 +52,7 @@ img, video {
   object-fit: cover;
   height: auto;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0;
   padding: 0;
 }

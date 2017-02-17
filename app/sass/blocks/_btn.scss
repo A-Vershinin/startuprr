@@ -4,7 +4,7 @@
   padding: 4px 10px;
   @include font-size-rem(10);
   line-height: 29px;
-  font-family: $raleway-extrabold;
+  font-family: $raleway-bold;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
@@ -16,7 +16,8 @@
   cursor: pointer;
   box-sizing: border-box;
   outline: 0;
-  transition: .4s ease;
+  transition: .3s ease;
+  user-select: none;
   &:hover {
     color: $light-2;
     background-color: $accent;

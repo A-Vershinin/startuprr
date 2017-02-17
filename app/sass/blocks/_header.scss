@@ -1,8 +1,8 @@
 .header {
   position: relative;
-  min-height: 750px;
   color: $gray-1;
   background-color: $bg-3;
+  min-height: 750px;
   background-image: url("../img/bg/bg-header.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
@@ -13,7 +13,6 @@
 }
 .header__block {
   max-width: 630px;
-  // width: 622px;
   min-height: 315px;
   padding-top: 225px;
   @include font-size-rem(18);
@@ -22,12 +21,12 @@
   text-transform: uppercase;
   text-align: center;
   color: $gray-4;
-  // background-color: silver;
 }
-// .header__some-text {
-//   margin-bottom: 10px;
-//   line-height: 1;
-// }
+.header__some-text {
+  // margin-bottom: 10px;
+  // line-height: 1;
+  font-weight: 700;
+}
 .header__title {
   margin-bottom: 20px;
   @include font-size-rem(64);

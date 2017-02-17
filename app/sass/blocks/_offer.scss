@@ -1,5 +1,6 @@
 .offer {
-  margin-bottom: 110px;
+  position: relative;
+  background-color: #f9f9f9;
 }
 .offer__top {
   display: flex;
@@ -22,7 +23,7 @@
 }
 .offer__bottom {
   position: relative;
-  margin-bottom: 200px;
+  padding-bottom: 110px;
 }
 .offer__header {
   position: relative;

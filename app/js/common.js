@@ -109,8 +109,39 @@ document.addEventListener("DOMContentLoaded", function() {
         // nextArrow: "feedback__arrow-next"
       });
     }
+    //page map
+    pageMap();
+    function pageMap() {
+      function initialize() {
+        var mapOptions = {
+          center: {lat: 40.71, lng: -74},
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.TERRAIN,
+          disableDefaultUI: false,
+          scrollwheel: true,
+          zoomControl: true,
+          // panControl: true,
+          mapTypeControl: false,
+          streetViewControl: false,
+          overviewMapControl: true
+        };
+        var mapContainer = document.querySelector("#google-map");
+        var map = new google.maps.Map(mapContainer, mapOptions);
 
 
+        var image = new google.maps.MarkerImage('img/icons/icon-map-pin.svg',
+         new google.maps.Size(36, 52),
+         new google.maps.Point(0, 0)
+        );
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng('40.711', '-74.007'),
+          map: map,
+          title: 'New York',
+          icon: image
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    }
     console.log("JS active");
 
 

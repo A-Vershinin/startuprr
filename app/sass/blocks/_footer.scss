@@ -1,0 +1,99 @@
+.footer {
+  position: relative;
+  margin-bottom: 200px;
+  @extend %clearfix;
+}
+.footer__top {
+  min-height: 170px;
+  background-color: $light-2;
+  background-image: url("../img/bg/bg-pricses.jpg");
+  @include cover();
+  @media #{$retina} {
+    background-image: url("../img/bg/bg-pricses@2x.jpg");
+  }
+}
+.footer__top-wrap {
+  min-height: 170px;
+  background-image: url("../img/bg/bg-pricses2@1x.png");
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  @media #{$retina} {
+    background-image: url("../img/bg/bg-pricses2@2x.png");
+  }
+}
+.footer__top-text {
+  display: block;
+  float: left;
+  max-width: 75%;
+  padding-top: 65px;
+  margin-left: 135px;
+  color: $gray-4;
+  font-family: $raleway-bold;
+  @include font-size-rem(26);
+  font-weight: 700;
+  line-height: 20px;
+  span {
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+  }
+}
+.footer__top-button {
+  float: right;
+}
+.footer__top-icon {
+  display: inline-block;
+  vertical-align: top;
+  line-height: inherit;
+  svg {
+    fill: $accent;
+  }
+}
+.footer__top-button {
+  margin-top: 60px;
+}
+.footer__top-btn {
+  vertical-align: middle;
+  padding: 5px 16px;
+  @include font-size-rem(13);
+  color: $gray-5;
+  background-color: $accent;
+  border: none;
+  &:hover {
+    background-color: $accent-active;
+  }
+}
+.footer__top-button-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  line-height: 20px;
+  svg {
+    fill: $gray-5;
+  }
+}
+.footer__socials {
+  // min-height: 275px;
+  background-color: $bg-2;
+}
+.footer__socials-logo {
+  padding-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.footer__socials-logo-link {
+  max-width: 267px;
+  max-height: 69px;
+}
+.footer__socials-wrap {
+  padding-bottom: 65px;
+}
+.footer__contacts {
+
+}
+.footer__map {
+  min-height: 500px;
+}
+.footer__copyright {
+  min-height: 100px;
+}

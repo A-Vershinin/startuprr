@@ -1,6 +1,13 @@
 .socials {
   @include ul-reset();
   font-size: 0;
+  &--footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 }
 .socials__item {
   position: relative;
@@ -10,6 +17,12 @@
   transform: rotate(45deg);
   border-radius: 4px;
   transition: .3s ease;
+  &--footer {
+    transform: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
 }
 .socials__link {
   display: block;
@@ -28,6 +41,23 @@
     border-radius: 4px;
     & svg {
       fill: #fff;
+    }
+  }
+  &--footer {
+    width: 44px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid $gray-3;
+    border-radius: 6px;
+    box-sizing: border-box;
+    svg {
+      transform: translate(-50%, -50%) rotate(0deg);
+      fill: $gray-5;
+    }
+    &:hover {
+      background-color: $accent;
+      border-radius: 6px;
+      border-color: $accent;
     }
   }
 }
