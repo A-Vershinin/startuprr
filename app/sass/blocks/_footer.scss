@@ -1,7 +1,5 @@
 .footer {
   position: relative;
-  margin-bottom: 200px;
-  @extend %clearfix;
 }
 .footer__top {
   min-height: 170px;
@@ -13,6 +11,7 @@
   }
 }
 .footer__top-wrap {
+  @extend %clearfix;
   min-height: 170px;
   background-image: url("../img/bg/bg-pricses2@1x.png");
   background-repeat: no-repeat;
@@ -73,7 +72,6 @@
   }
 }
 .footer__socials {
-  // min-height: 275px;
   background-color: $bg-2;
 }
 .footer__socials-logo {
@@ -89,11 +87,20 @@
   padding-bottom: 65px;
 }
 .footer__contacts {
-
+  position: relative;
 }
 .footer__map {
   min-height: 500px;
+  filter: grayscale(100%);
+  filter: gray;
 }
 .footer__copyright {
-  min-height: 100px;
+  padding: 50px 0 35px 0;
+  @include font-size-rem(16);
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  color: $gray-5;
+  background-color: $bg-2;
 }

@@ -18,11 +18,12 @@
   width: 24%;
   background-color: rgba(0, 0, 0, .1);
   border-radius: 4px;
-  transition: background-color .4s ease, opacity .4s ease;
-  opacity: .4;
+  transition: all .4s ease;
   &:hover {
-    opacity: 1;
     background-color: rgba(0, 0, 0, .3);
+    .brands__link {
+      filter: brightness(50);
+    }
   }
 }
 .brands__link {
@@ -34,6 +35,7 @@
   text-align: center;
   line-height: 160px;
   cursor: pointer;
+  filter: contrast(0);
   &:hover {
   }
   img {

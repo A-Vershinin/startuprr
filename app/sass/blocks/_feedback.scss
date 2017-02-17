@@ -81,8 +81,8 @@
 .feedback__quote-right {
   display: block;
   position: absolute;
-  top: -20px;
-  left: 0;
+  top: -5px;
+  left: 25px;
   font-family: $raleway-regular;
   font-size: 80px;
   font-weight: 400;
@@ -95,8 +95,9 @@
 .feedback__quote-right {
   left: auto;
   top: auto;
-  right: 0;
-  bottom: 0;
+  right: 100px;
+  bottom: 10px;
+  transform: rotate(0deg);
 }
 
 .feedback__arrows {
