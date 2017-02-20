@@ -30,21 +30,26 @@ input, textarea {
     color: $gray-3;
   }
 }
+a:visited,
+a:link {
+  // color: $light-1;
+}
 input:hover,
 textarea:hover {
   color: $gray-1;
+  cursor: pointer;
 }
 input:focus,
 textarea:focus {
   // border: 2px solid $blue-1;
 }
+input:valid,
+textarea:valid {
+  // border-color: #6ec292;
+}
 input:invalid,
 textarea:invalid {
-  border-color: #f0b1b1;
-}
-a:visited,
-a:link {
-  // color: $light-1;
+  // border-color: #f0b1b1;
 }
 img, video {
   display: block;

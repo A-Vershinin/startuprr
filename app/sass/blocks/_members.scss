@@ -23,7 +23,7 @@
     z-index: 40;
   }
   &::after {
-    top: 92px;
+    top: 93px;
   }
 }
 .members__title {
@@ -95,7 +95,8 @@
   @include ul-reset;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 .members__item {
   position: relative;
@@ -207,8 +208,7 @@
 }
 .members__arrows {
   position: absolute;
-  top: 55%;
-  transform: translateY(-55%);
+  top: -24%;
   width: 100%;
   z-index: 60;
   cursor: pointer;

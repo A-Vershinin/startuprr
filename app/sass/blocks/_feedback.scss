@@ -76,28 +76,19 @@
   line-height: 34px;
   font-family: $raleway-medium;
   font-weight: 500;
-}
-.feedback__quote-left,
-.feedback__quote-right {
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: 25px;
-  font-family: $raleway-regular;
-  font-size: 80px;
-  font-weight: 400;
-  text-transform: uppercase;
-  transform: rotate(180deg);
-  svg {
+  &:before {
+    content: "\201C";
+    // content: "\201D";
     color: $gray-5;
+    @include font-size-rem(50);
+    line-height: 34px;
   }
-}
-.feedback__quote-right {
-  left: auto;
-  top: auto;
-  right: 100px;
-  bottom: 10px;
-  transform: rotate(0deg);
+  &:after {
+    content: "\201D";
+    color: $gray-5;
+    @include font-size-rem(50);
+    line-height: 34px;
+  }
 }
 
 .feedback__arrows {

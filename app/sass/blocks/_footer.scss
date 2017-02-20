@@ -94,6 +94,15 @@
   filter: grayscale(100%);
   filter: gray;
 }
+.footer__form {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 30;
+  border-radius: 4px;
+}
+
 .footer__copyright {
   padding: 50px 0 35px 0;
   @include font-size-rem(16);

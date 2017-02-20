@@ -9,6 +9,9 @@
 @import "_fonts.scss";
 @import "_main.scss";
 
+//Стили widgets//
+@import "widgets/fancybox.scss";
+
 //Стили BEM-блоков//
 // index.html
 @import "blocks/_wrapper.scss";
@@ -17,15 +20,17 @@
 @import "blocks/_logo.scss";
 @import "blocks/_menu.scss";
 @import "blocks/_search.scss";
+@import "blocks/_contact-form.scss";
+@import "blocks/_status-popup.scss";
 @import "blocks/_header.scss";
 @import "blocks/_offer.scss";
 @import "blocks/_features.scss";
 @import "blocks/_services.scss";
 @import "blocks/_skills.scss";
 @import "blocks/_works.scss";
+@import "blocks/_socials.scss";
 @import "blocks/_facts.scss";
 @import "blocks/_members.scss";
-@import "blocks/_socials.scss";
 @import "blocks/_feedback.scss";
 @import "blocks/_brands.scss";
 @import "blocks/_prices.scss";
