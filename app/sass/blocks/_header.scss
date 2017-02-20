@@ -2,20 +2,19 @@
   position: relative;
   color: $gray-1;
   background-color: $bg-3;
-  min-height: 750px;
+  // min-height: rem(750px);
   background-image: url("../img/bg/bg-header.jpg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
+  @extend %cover;
   @media #{$retina} {
     background-image: url("../img/bg/bg-header@2x.jpg");
   }
 }
 .header__block {
-  max-width: 630px;
-  min-height: 315px;
-  padding-top: 225px;
-  @include font-size-rem(18);
+  position: relative;
+  max-width: rem(630px);
+  padding-top: rem(223px);
+  padding-bottom: rem(223px);
+  font-size: rem(18px);
   font-weight: 500;
   font-family: $raleway-regular;
   text-transform: uppercase;
@@ -23,36 +22,34 @@
   color: $gray-4;
 }
 .header__some-text {
-  // margin-bottom: 10px;
-  // line-height: 1;
   font-weight: 700;
 }
 .header__title {
-  margin-bottom: 20px;
-  @include font-size-rem(64);
+  margin-bottom: rem(20px);
+  font-size: rem(64px);
   line-height: 1;
   font-family: $raleway-extrabold;
   font-weight: 800;
   text-align: left;
 }
 .header__desc {
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
   color: $gray-5;
   background-color: $bg-5;
   border-radius: 4px;
   line-height: 2;
   span {
-    @include font-size-rem(20);
+    font-size: rem(20px);
     font-weight: 700;
   }
 }
 .header__info {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
   color: $light-3;
   font-family: $raleway-extrabold;
-  @include font-size-rem(26);
-  line-height: 16px;
+  font-size: rem(26px);
+  line-height: rem(16px);
   text-transform: uppercase;
 
 }
@@ -61,29 +58,29 @@
   &::before, &::after {
     content: "";
     position: absolute;
-    top: 5px;
+    top: rem(5px);
     left: 0;
     margin: 0;
     width: 19.3%;
-    height: 1px;
+    height: rem(1px);
     background-color: $light-1;
     background-image: $bg-gradient;
     z-index: 80;
   }
   &::after {
-    top: 10px;
+    top: rem(10px);
   }
 }
 .header__line-right {
   &::before, &::after {
-    left: 504px;
+    left: rem(504px);
   }
 }
 .header__info-text {
   position: relative;
   @include inline-block($valign: top);
-  padding: 0 20px;
-  @include font-size-rem(26);
+  padding: 0 rem(20px);
+  font-size: rem(26px);
   font-weight: 800;
   z-index: 50;
   b {
@@ -93,10 +90,10 @@
 .header__hexagon-left,
 .header__hexagon-right {
   position: absolute;
-  top: 1px;
-  left: -17px;
-  width: 15px;
-  height: 15px;
+  top: rem(1px);
+  left: rem(-17px);
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 2px;
   transform: rotate(45deg);
   z-index: 100;
@@ -104,31 +101,52 @@
 }
 .header__hexagon-left--md,
 .header__hexagon-right--md {
-  top: 2px;
-  left: -28px;
-  width: 12px;
-  height: 12px;
+  top: rem(2px);
+  left: rem(-28px);
+  width: rem(12px);
+  height: rem(12px);
   background-color: $bg-6;
   z-index: 90;
 }
 .header__hexagon-left--sm,
 .header__hexagon-right--sm {
-  top: 3.5px;
-  left: -36px;
-  width: 9px;
-  height: 9px;
+  top: rem(3.5px);
+  left: rem(-36px);
+  width: rem(9px);
+  height: rem(9px);
   background-color: $bg-7;
   z-index: 80;
 }
 .header__hexagon-right {
-  left: 288px;
+  left: rem(288px);
 }
 .header__hexagon-right--md {
-  left: 300px;
+  left: rem(300px);
 }
 .header__hexagon-right--sm {
-  left: 310px;
+  left: rem(310px);
 }
 .header__icon svg {
+  width: rem(58px);
+  height: rem(58px);
   fill: #fff;
+}
+
+@media screen and #{($laptop-point-widths-des)}{
+  html {
+    font-size: 14px;
+  }
+
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+  html {
+    font-size: 13px;
+  }
+
+}
+@media screen and #{($phone-point-widths-des)} {
+  html {
+    font-size: 12px;
+  }
 }

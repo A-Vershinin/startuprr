@@ -40,6 +40,10 @@ $bg-gradient: linear-gradient(to right, #f9f9f9 0%, transparent 20%,
   transparent 50%, transparent 80%, #f9f9f9 100%);
 //размер шрифта//
 $font-size-base: 16px;
+$font-size-desktop: 16px;
+$font-size-laptop: 15px;
+$font-size-tablet: 14px;
+$font-size-phone: 13px;
 $lin-height-base: 24px/$font-size-base;
 
 //брейкпоинты//

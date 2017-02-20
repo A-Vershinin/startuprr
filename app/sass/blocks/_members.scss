@@ -32,8 +32,8 @@
   padding: 0 20px;
   padding: 0 60px;
   font-family: $raleway-extrabold;
-  @include font-size-rem(26);
-  line-height: 20px;
+  font-size: rem(26px);
+  line-height: rem(20px);
   color: $accent;
   background-color: $bg-3;
   font-weight: 800;
@@ -44,7 +44,7 @@
   }
 }
 .members__intro {
-  @include font-size-rem(16);
+  font-size: rem(16px);
   font-weight: 500;
   line-height: 16px;
    color: #7a7a7a;
@@ -92,7 +92,7 @@
   position: relative;
 }
 .members__list {
-  @include ul-reset;
+  @extend %ul-reset;
   display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
@@ -142,7 +142,7 @@
   @include inline-block($valign: top);
   width: 136px;
   height: 40px;
-  @include font-size-rem(13);
+  font-size: rem(13px);
   line-height: 40px;
   font-weight: 700;
   font-family: $raleway-extrabold;
@@ -159,7 +159,7 @@
   padding-bottom: 8px;
   margin-bottom: 16px;
   color: $gray-3;
-  @include font-size-rem(12);
+  font-size: rem(12px);
   line-height: 22px;
   font-family: $raleway-medium;
   font-weight: 500;
@@ -180,7 +180,7 @@
   margin-bottom: 8px;
   color: $gray-6;
   font-family: $raleway-regular;
-  @include font-size-rem(12);
+  font-size: rem(12px);
   font-weight: 500;
   line-height: 20px;
   text-decoration: none;
@@ -196,7 +196,7 @@
 }
 .members__overlay {
   opacity: 0;
-  @include absolute-center;
+  @extend %absolute-center;
   background-color: $bg-4;
   & .socials {
     position: absolute;

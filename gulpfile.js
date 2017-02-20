@@ -39,9 +39,7 @@ gulp.task("style", function() { //Создаём таск "style"
     .pipe(sourcemaps.init()) //История изменения стилей, которая помогает нам при отладке в devTools.
     .pipe(sass({errLogToConsole: true}))   //Преобразуем Sass в CSS
     .pipe(postcss([  //Добавляем префиксы под разные версии
-      autoprefixer({browsers: [
-        "last 3 version"
-      ]}),
+      autoprefixer({browsers: ["> 2%"]}),
       mqpacker({
         sort: true //соеденяем все медиазапросы
       })
