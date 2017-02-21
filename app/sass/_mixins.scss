@@ -1,13 +1,5 @@
 
 //* миксины/расширения*//
-@mixin clearfix() {
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
 %clearfix {
   &::before, &::after {
     content: "";
@@ -15,16 +7,13 @@
     clear: both;
   }
 }
+//сброс отступов у списка
 %ul-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-@mixin ul-reset() {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+//скрываем элемент
 %visually-hidden  {
   position: absolute;
   width: 1px;
@@ -35,6 +24,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+//показываем элемент
 %visually-view  {
   position: static;
   width: auto;
@@ -55,11 +45,6 @@
   margin: auto;
 }
 //растягивание фона
-@mixin cover() {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
 %cover {
   background-size: cover;
   background-position: center center;
@@ -91,9 +76,6 @@
 @mixin inline-block($valign: top) {
   display: inline-block;
   vertical-align: $valign;
-}
-@mixin font-size-rem($size) {
-  font-size: $size / 16 + rem;
 }
 
 //перевод в rem-ы

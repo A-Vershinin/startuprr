@@ -1,22 +1,21 @@
 .services {
-  min-height: 480px;
   color: $gray-4;
   background-color: $bg-3;
 }
 .services__list {
-  @include ul-reset();
+  @extend %ul-reset;
   display: flex;
   justify-content: space-between;
   align-content: space-between;
   flex-flow: row wrap;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding-top: rem(80px);
+  padding-bottom: rem(100px);
 }
 .services__item {
   position: relative;
   width: 31.62%;
   margin-left: 2.5%;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   &:nth-child(3n-2) {
     margin-left: 0;
   }
@@ -36,36 +35,36 @@
   }
 }
 .services__block {
-  margin-left: 60px;
+  margin-left: rem(60px);
 }
 .services__block-cap {
   color: $gray-3;
   font-family: $raleway-extrabold;
-  @include font-size-rem(14);
+  font-size: rem(14px);
   font-weight: 700;
   text-transform: uppercase;
 }
 .services__block-subcap {
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   color: $gray-6;
   font-family: $raleway-medium;
-  @include font-size-rem(12);
+  font-size: rem(12px);
   font-weight: 500;
 }
 .services__block-text {
   margin-bottom: 15px;
   color: $gray-1;
   font-family: $raleway-medium;
-  @include font-size-rem(14);
-  line-height: 24px;
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-weight: 500;
 }
 .services__pict {
   position: relative;
   @include inline-block($valign: top);
   float: left;
-  width: 40px;
-  height: 56px;
+  width: rem(40px);
+  height: rem(56px);
   color: #fff;
   background-color: $accent;
   border-top-left-radius: 4px;
@@ -77,16 +76,16 @@
   top: 100%;
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid $accent;
+  border-left: rem(20px) solid transparent;
+  border-right: rem(20px) solid transparent;
+  border-top: rem(20px) solid $accent;
   transition: .4s ease;
 }
 .services__triangle-two {
   position: absolute;
   top: 0;
-  width: 40px;
-  height: 36px;
+  width: rem(40px);
+  height: rem(36px);
   background: $bg-2;
   border: 0;
   border-top-left-radius: 4px;
@@ -98,18 +97,18 @@
     left: 0;
     width: 0;
     height: 0;
-    border-top: 20px solid $bg-2;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+    border-top: rem(20px) solid $bg-2;
+    border-left: rem(20px) solid transparent;
+    border-right: rem(20px) solid transparent;
   }
 }
 .services__icon {
   position: absolute;
   z-index: 35;
   @include inline-block($valign: middle);
-  bottom: 9px;
+  bottom: rem(9px);
   width: 100%;
-  height: 36px;
+  height: rem(36px);
   text-align: center;
   svg {
     fill: $gray-5;

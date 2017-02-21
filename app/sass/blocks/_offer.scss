@@ -13,13 +13,13 @@
   box-sizing: border-box;
 }
 .offer__top .logo {
-  max-width: 250px;
+  max-width: rem(250px);
 }
 .offer__top .menu {
-  max-width: 750px;
+  max-width: rem(750px);
 }
 .offer__top .search {
-  max-width: 40px;
+  max-width: rem(40px);
 }
 .offer__bottom {
   position: relative;
@@ -51,7 +51,7 @@
   @include inline-block($valign: top);
   font-family: $raleway-extrabold;
   padding: 0 rem(70px);
-  margin-bottom: rem(10px);
+  margin-bottom: rem(15px);
   font-size: rem(26px);
   line-height: rem(20px);
   color: $gray-4;

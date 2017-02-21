@@ -2,20 +2,19 @@
   position: relative;
 }
 .footer__top {
-  min-height: 170px;
   background-color: $light-2;
   background-image: url("../img/bg/bg-pricses.jpg");
-  @include cover();
+  @extend %cover;
   @media #{$retina} {
     background-image: url("../img/bg/bg-pricses@2x.jpg");
   }
 }
 .footer__top-wrap {
   @extend %clearfix;
-  min-height: 170px;
+  height: rem(170px);
   background-image: url("../img/bg/bg-pricses2@1x.png");
   background-repeat: no-repeat;
-  background-position: left 10px;
+  background-position: left rem(10px);
   @media #{$retina} {
     background-image: url("../img/bg/bg-pricses2@2x.png");
   }
@@ -24,13 +23,13 @@
   display: block;
   float: left;
   max-width: 75%;
-  padding-top: 65px;
-  margin-left: 135px;
+  padding-top: rem(65px);
+  margin-left: rem(135px);
   color: $gray-4;
   font-family: $raleway-bold;
-  @include font-size-rem(26);
+  font-size: rem(26px);
   font-weight: 700;
-  line-height: 20px;
+  line-height: rem(20px);
   span {
     display: inline-block;
     vertical-align: top;
@@ -49,12 +48,12 @@
   }
 }
 .footer__top-button {
-  margin-top: 60px;
+  margin-top: rem(60px);
 }
 .footer__top-btn {
   vertical-align: middle;
-  padding: 5px 16px;
-  @include font-size-rem(13);
+  padding: rem(5px) rem(16px);
+  font-size: rem(13px);
   color: $gray-5;
   background-color: $accent;
   border: none;
@@ -65,8 +64,8 @@
 .footer__top-button-icon {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px;
-  line-height: 20px;
+  margin-left: rem(10px);
+  line-height: rem(20px);
   svg {
     fill: $gray-5;
   }
@@ -75,22 +74,22 @@
   background-color: $bg-2;
 }
 .footer__socials-logo {
-  padding-top: 40px;
-  margin-bottom: 50px;
+  padding-top: rem(40px);
+  margin-bottom: rem(50px);
   text-align: center;
 }
 .footer__socials-logo-link {
-  max-width: 267px;
-  max-height: 69px;
+  max-width: rem(267px);
+  max-height: rem(69px);
 }
 .footer__socials-wrap {
-  padding-bottom: 65px;
+  padding-bottom: rem(65px);
 }
 .footer__contacts {
   position: relative;
 }
 .footer__map {
-  min-height: 500px;
+  height: rem(500px);
   filter: grayscale(100%);
   filter: gray;
 }
@@ -104,10 +103,10 @@
 }
 
 .footer__copyright {
-  padding: 50px 0 35px 0;
-  @include font-size-rem(16);
+  padding: rem(50px) 0 rem(35px) 0;
+  font-size: rem(16px);
   line-height: 1;
-  letter-spacing: 1px;
+  letter-spacing: rem(1px);
   font-weight: 700;
   text-align: center;
   color: $gray-5;

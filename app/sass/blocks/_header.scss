@@ -2,7 +2,7 @@
   position: relative;
   color: $gray-1;
   background-color: $bg-3;
-  // min-height: rem(750px);
+  height: rem(750px);
   background-image: url("../img/bg/bg-header.jpg");
   @extend %cover;
   @media #{$retina} {

@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  width: 368px;
+  width: rem(368px);
   padding: 5.5%;
   align-items: center;
   background-color: $bg-3;
@@ -19,10 +19,10 @@
 .contact-form__texarea {
   display: block;
   width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 0 18px;
-  @include font-size-rem(16);
+  height: rem(40px);
+  margin-bottom: rem(20px);
+  padding: 0 rem(18px);
+  font-size: rem(16px);
   line-height: 1;
   font-family: $raleway-regular;
   font-weight: 400;
@@ -37,35 +37,35 @@
     border-color: $accent;
   }
   &::-webkit-input-placeholder {
-    @include font-size-rem(14);
+    font-size: rem(14px);
     color: $gray-2;
     font-style: italic;
   }
   &:-moz-placeholder {
-    @include font-size-rem(14);
+    font-size: rem(14px);
     color: $gray-2;
     font-style: italic;
   }
   &:-ms-input-placeholder {
-    @include font-size-rem(14);
+    font-size: rem(14px);
     color: $gray-2;
     font-style: italic;
   }
 }
 
 .contact-form__texarea {
-  height: 118px;
-  padding: 15px 20px;
+  height: rem(118px);
+  padding: rem(15px) rem(20px);
   resize: none;
 }
 .contact-form__btn {
   display: block;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 rem(10px);
   color: $gray-5;
   background-color: $accent;
-  @include font-size-rem(13);
-  line-height: 40px;
+  font-size: rem(13px);
+  line-height: rem(40px);
   font-family: $raleway-bold;
   font-weight: 400;
   text-align: center;

@@ -8,14 +8,14 @@
   left: 50%;
   z-index: 40;
   transform: translate(-50%, -50%) rotate(45deg);
-  width: 54px;
-  height: 54px;
+  width: rem(54px);
+  height: rem(54px);
   background-color: $bg-2;
   border-radius: 3px;
   svg {
     position: absolute;
-    top: -18px;
-    left: -17px;
+    top: rem(-18px);
+    left: rem(-17px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
@@ -30,7 +30,7 @@
   transform: translate(-50%, -50%);
 }
 .feedback__list {
-  @include ul-reset();
+  @extend %ul-reset;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -38,28 +38,28 @@
 }
 .feedback__block {
   position: relative;
-  padding-top: 75px;
-  padding-bottom: 80px;
+  padding-top: rem(75px);
+  padding-bottom: rem(80px);
 }
 .feedback__item {
   width: 100%;
   position: relative;
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: rem(25px);
 }
 .feedback__btn {
   @include inline-block($valign: top);
-  margin-bottom: 25px;
-  padding: 5px 11px;
+  margin-bottom: rem(25px);
+  padding: rem(5px) rem(11px);
   color: $accent;
   background-color: $light-2;
-  @include font-size-rem(13);
+  font-size: rem(13px);
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
   & span {
     color: $gray-6;
-    @include font-size-rem(12);
+    font-size: rem(12px);
     font-weight: 500;
     font-style: italic;
   }
@@ -70,30 +70,29 @@
 .feedback__quote {
   position: relative;
   display: block;
-  margin: 0 10px;
+  margin: 0 rem(10px);
   color: $gray-5;
-  @include font-size-rem(20);
-  line-height: 34px;
+  font-size: rem(20px);
+  line-height: rem(34px);
   font-family: $raleway-medium;
   font-weight: 500;
   &:before {
     content: "\201C";
-    // content: "\201D";
     color: $gray-5;
-    @include font-size-rem(50);
-    line-height: 34px;
+    font-size: rem(50px);
+    line-height: rem(34px);
   }
   &:after {
     content: "\201D";
     color: $gray-5;
-    @include font-size-rem(50);
-    line-height: 34px;
+    font-size: rem(50px);
+    line-height: rem(34px);
   }
 }
 
 .feedback__arrows {
   position: absolute;
-  bottom: 80px;
+  bottom: rem(80px);
   width: 100%;
   z-index: 60;
   cursor: pointer;
@@ -101,46 +100,46 @@
 .feedback__arrow-prev {
   position: absolute;
   left: 47%;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   text-indent: -9999px;
   background-color: $gray-5;
   border-radius: 4px;
   &:hover {
     background-color: $bg-2;
     &::after {
-      border-right: 12px solid $gray-5;
+      border-right: rem(12px) solid $gray-5;
     }
   }
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 1px;
-    border: 8px solid transparent;
-    border-right: 12px solid $accent;
+    top: rem(7px);
+    left: rem(1px);
+    border: rem(8px) solid transparent;
+    border-right: rem(12px) solid $accent;
   }
 }
 .feedback__arrow-next {
   position: absolute;
   right: 47%;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   text-indent: -9999px;
   background-color: $gray-5;
   border-radius: 4px;
   &:hover {
     background-color: $bg-2;
     &::after {
-      border-left: 12px solid $gray-5;
+      border-left: rem(12px) solid $gray-5;
     }
   }
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 11px;
-    border: 8px solid transparent;
-    border-left: 12px solid $accent;
+    top: rem(7px);
+    left: rem(11px);
+    border: rem(8px) solid transparent;
+    border-left: rem(12px) solid $accent;
   }
 }

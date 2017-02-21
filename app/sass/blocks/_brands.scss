@@ -1,20 +1,22 @@
 .brands {
   position: relative;
   background-color: $bg-2;
-  padding: 50px 0;
+  padding: rem(50px) 0;
 }
 .brands__block {
   position: relative;
 }
 .brands__list {
   position: relative;
-  @include ul-reset();
+  @extend %ul-reset;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
 }
 .brands__item {
-  max-width: 270px;
+  max-width: rem(270px);
   width: 24%;
   background-color: rgba(0, 0, 0, .1);
   border-radius: 4px;
@@ -33,7 +35,7 @@
   height: 100%;
   text-decoration: none;
   text-align: center;
-  line-height: 160px;
+  line-height: rem(160px);
   cursor: pointer;
   filter: contrast(0);
   &:hover {
@@ -46,15 +48,15 @@
 .brands__arrows {
   position: absolute;
   top: 50%;
-  margin-top: -15px;
+  margin-top: rem(-15px);
   transform: translateY(50%);
   width: 100%;
 }
 .brands__arrow-prev {
   position: absolute;
-  left: -6%;
-  width: 30px;
-  height: 30px;
+  left: -1%;
+  width: rem(30px);
+  height: rem(30px);
   text-indent: -9999px;
   background-color: $gray-5;
   border-radius: 4px;
@@ -62,23 +64,23 @@
   &:hover {
     background-color: $accent;
     &::after {
-      border-right: 12px solid $gray-5;
+      border-right: rem(12px) solid $gray-5;
     }
   }
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 1px;
-    border: 8px solid transparent;
-    border-right: 12px solid $blue-2;
+    top: rem(7px);
+    left: rem(1px);
+    border: rem(8px) solid transparent;
+    border-right: rem(12px) solid $blue-2;
   }
 }
 .brands__arrows-next {
   position: absolute;
-  right: -6%;
-  width: 30px;
-  height: 30px;
+  right: -1%;
+  width: rem(30px);
+  height: rem(30px);
   text-indent: -9999px;
   background-color: $gray-5;
   border-radius: 4px;
@@ -86,15 +88,15 @@
   &:hover {
     background-color: $accent;
     &::after {
-      border-left: 12px solid $gray-5;
+      border-left: rem(12px) solid $gray-5;
     }
   }
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 11px;
-    border: 8px solid transparent;
-    border-left: 12px solid $blue-2;
+    top: rem(7px);
+    left: rem(11px);
+    border: rem(8px) solid transparent;
+    border-left: rem(12px) solid $blue-2;
   }
 }

@@ -1,36 +1,36 @@
 .members {
   position: relative;
-  margin-bottom: 105px;
+  margin-bottom: rem(105px);
   background-color: $bg-3;
 }
 .members__header {
   position: relative;
-  margin-bottom: 40px;
-  padding-top: 80px;
+  margin-bottom: rem(40px);
+  padding-top: rem(80px);
   text-align: center;
   z-index: 60;
   &::before, &::after {
     content: "";
     position: absolute;
-    top: 84px;
+    top: rem(84px);
     left: 0;
     margin: 0;
     width: 100%;
-    height: 1px;
+    height: rem(1px);
     background-color: #dedede;
     background-image: linear-gradient(to right, #f9f9f9 0%, transparent 20%,
       transparent 50%, transparent 80%, #f9f9f9 100%);
     z-index: 40;
   }
   &::after {
-    top: 93px;
+    top: rem(93px);
   }
 }
 .members__title {
   position: relative;
   @include inline-block($valign: top);
-  padding: 0 20px;
-  padding: 0 60px;
+  padding: 0 rem(60px);
+  margin-bottom: rem(15px);
   font-family: $raleway-extrabold;
   font-size: rem(26px);
   line-height: rem(20px);
@@ -46,16 +46,16 @@
 .members__intro {
   font-size: rem(16px);
   font-weight: 500;
-  line-height: 16px;
-   color: #7a7a7a;
+  line-height: 1;
+  color: #7a7a7a;
 }
 .members__hexagon-left,
 .members__hexagon-right {
   position: absolute;
-  top: 1px;
-  left: 25px;
-  width: 15px;
-  height: 15px;
+  top: rem(1px);
+  left: rem(25px);
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 2px;
   transform: rotate(45deg);
   z-index: 100;
@@ -63,30 +63,30 @@
 }
 .members__hexagon-left--md,
 .members__hexagon-right--md {
-  top: 2px;
-  left: 17px;
-  width: 12px;
-  height: 12px;
+  top: rem(2px);
+  left: rem(17px);
+  width: rem(12px);
+  height: rem(12px);
   background-color: $bg-8;
   z-index: 90;
 }
 .members__hexagon-left--sm,
 .members__hexagon-right--sm {
-  top: 3.5px;
-  left: 11px;
-  width: 9px;
-  height: 9px;
+  top: rem(3.5px);
+  left: rem(11px);
+  width: rem(9px);
+  height: rem(9px);
   background-color: $bg-9;
   z-index: 80;
 }
 .members__hexagon-right {
-  left: 286px;
+  left: rem(286px);
 }
 .members__hexagon-right--md {
-  left: 296px;
+  left: rem(296px);
 }
 .members__hexagon-right--sm {
-  left: 305px;
+  left: rem(305px);
 }
 .members__block {
   position: relative;
@@ -123,8 +123,8 @@
 }
 .members__pict {
   position: relative;
-  max-width: 270px;
-  max-height: 270px;
+  max-width: rem(270px);
+  max-height: rem(270px);
   overflow: hidden;
   background-color: $gray-2;
 }
@@ -135,15 +135,15 @@
 }
 .members__item-name {
   position: absolute;
-  top: -20px;
+  top: rem(-20px);
   left: 50%;
   z-index: 30;
   transform: translateX(-50%);
   @include inline-block($valign: top);
-  width: 136px;
-  height: 40px;
+  width: rem(136px);
+  height: rem(40px);
   font-size: rem(13px);
-  line-height: 40px;
+  line-height: rem(40px);
   font-weight: 700;
   font-family: $raleway-extrabold;
   text-transform: uppercase;
@@ -155,12 +155,12 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  padding-top: 32px;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
+  padding-top: rem(32px);
+  padding-bottom: rem(8px);
+  margin-bottom: rem(16px);
   color: $gray-3;
   font-size: rem(12px);
-  line-height: 22px;
+  line-height: rem(22px);
   font-family: $raleway-medium;
   font-weight: 500;
   &::after {
@@ -170,19 +170,19 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 1px;
+    height: rem(1px);
     background-color:  #ebebeb;
   }
 }
 .members__mail,
 .members__tell {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
   color: $gray-6;
   font-family: $raleway-regular;
   font-size: rem(12px);
   font-weight: 500;
-  line-height: 20px;
+  line-height: rem(20px);
   text-decoration: none;
   svg {
     fill: $gray-6;
@@ -191,7 +191,7 @@
 .members__mail-icon {
   display: inline-block;
   vertical-align: middle;
-  padding-right: 17px;
+  padding-right: rem(17px);
   padding-right: 11%;
 }
 .members__overlay {
@@ -216,8 +216,8 @@
 .members__arrows-left {
   position: absolute;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   text-indent: -9999px;
   background-color: $bg-2;
   border-radius: 4px;
@@ -227,17 +227,17 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 1px;
-    border: 8px solid transparent;
-    border-right: 12px solid $gray-5;
+    top: rem(7px);
+    left: 0;
+    border: rem(8px) solid transparent;
+    border-right: rem(12px) solid $gray-5;
   }
 }
 .members__arrows-right {
   position: absolute;
   right: 0;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   text-indent: -9999px;
   background-color: $bg-2;
   border-radius: 4px;
@@ -247,9 +247,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 11px;
-    border: 8px solid transparent;
-    border-left: 12px solid $gray-5;
+    top: rem(7px);
+    left: rem(11px);
+    border: rem(8px) solid transparent;
+    border-left: rem(12px) solid $gray-5;
   }
 }

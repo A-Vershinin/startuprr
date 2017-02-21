@@ -8,11 +8,11 @@
 .menu__toggle {
   position: absolute;
   top: 0;
-  right: 90px;
+  right: rem(90px);
   z-index: 20;
   display: none;
-  width: 70px;
-  height: 50px;
+  width: rem(70px);
+  height: rem(50px);
   font-size: 0;
   background-color: $accent;
   transition: 0.5s ease;
@@ -22,12 +22,12 @@
   &:before {
     content: "";
     position: absolute;
-    top: 14px;
-    left: 15px;
-    width: 40px;
-    height: 4px;
+    top: rem(14px);
+    left: rem(15px);
+    width: rem(40px);
+    height: rem(4px);
     background-color: #fff;
-    box-shadow: 0 10px 0 0 #fff, 0 20px 0 0 #fff;
+    box-shadow: 0 rem(10px) 0 0 #fff, 0 rem(20px) 0 0 #fff;
     transition: 0.5s ease;
   }
   &:hover {
@@ -39,18 +39,18 @@
   }
 }
 .menu__list {
-  @include ul-reset();
+  @extend %ul-reset;
   font-size: 0;
   z-index: 100;
 }
 .menu__item {
   @include inline-block($valign: top);
-  @include font-size-rem(16);
+  font-size: rem(16px);
 }
 .menu__link {
   display: block;
-  padding: 10px 15px;
-  @include font-size-rem(14);
+  padding: rem(10px) rem(15px);
+  font-size: rem(14px);
   font-family: $raleway-bold;
   font-weight: 700;
   text-decoration: none;
@@ -77,16 +77,16 @@
 @media screen and #{($tablet-point-widths-des)} {
   .menu__toggle {
     display: block;
-    top: -25px;
-    right: 20px;
+    top: rem(-25px);
+    right: rem(20px);
   }
   .menu__list {
     position: absolute;
-    top: -25px;
-    left: -393px;
+    top: rem(-25px);
+    left: rem(-393px);
     visibility: hidden;
-    width: 300px;
-    height: 400px;
+    width: rem(300px);
+    height: rem(400px);
     border: 1px solid $accent;
     background-color: $bg-3;
     border-radius: 4px;
@@ -100,7 +100,7 @@
     }
   }
   .menu__link {
-    padding: 15px;
+    padding: rem(15px);
     color: $gray-2;
     border-radius: 0;
     border-bottom: 1px solid $gray-6;
@@ -118,10 +118,10 @@
       &:before {
         content: "";
         position: absolute;
-        top: 23px;
-        left: 15px;
-        width: 40px;
-        height: 4px;
+        top: rem(23px);
+        left: rem(15px);
+        width: rem(40px);
+        height: rem(4px);
         box-shadow: none;
         background-color: #fff;
         transition: 0.5s ease;
@@ -140,6 +140,11 @@
   .menu--closed {
     .menu__list {
       visibility: hidden;
+    }
+  }
+  .menu--closed {
+    .search {
+      display: none;
     }
   }
 }

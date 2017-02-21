@@ -10,14 +10,14 @@
   left: 50%;
   z-index: 40;
   transform: translate(-50%, -50%) rotate(45deg);
-  width: 54px;
-  height: 54px;
+  width: rem(54px);
+  height: rem(54px);
   background-color: $accent;
   border-radius: 3px;
   svg {
     position: absolute;
-    top: -18px;
-    left: -17px;
+    top: rem(-18px);
+    left: rem(-17px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
@@ -33,18 +33,19 @@
 }
 .facts__header {
   position: relative;
-  margin-bottom: 40px;
-  padding-top: 80px;
+  margin-bottom: rem(40px);
+  padding-top: rem(80px);
   text-align: center;
   z-index: 60;
 }
 .facts__title {
   position: relative;
   @include inline-block($valign: top);
-  padding: 0 20px;
+  padding: 0 rem(20px);
+  margin-bottom: rem(15px);
   font-family: $raleway-extrabold;
-  @include font-size-rem(26);
-  line-height: 20px;
+  font-size: rem(26px);
+  line-height: rem(20px);
   color: $gray-5;
   background-color: transparent;
   font-weight: 800;
@@ -55,18 +56,18 @@
   }
 }
 .facts__intro {
-  @include font-size-rem(16);
+  font-size: rem(16px);
   font-weight: 500;
-  line-height: 16px;
+  line-height: rem(16px);
    color: #7a7a7a;
 }
 .facts__hexagon-left,
 .facts__hexagon-right {
   position: absolute;
-  top: 1px;
-  left: -18px;
-  width: 15px;
-  height: 15px;
+  top: rem(1px);
+  left: rem(-18px);
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 2px;
   transform: rotate(45deg);
   z-index: 100;
@@ -74,43 +75,42 @@
 }
 .facts__hexagon-left--md,
 .facts__hexagon-right--md {
-  top: 2px;
-  left: -30px;
-  width: 12px;
-  height: 12px;
+  top: rem(2px);
+  left: rem(-30px);
+  width: rem(12px);
+  height: rem(12px);
   background-color: $bg-8;
   z-index: 90;
 }
 .facts__hexagon-left--sm,
 .facts__hexagon-right--sm {
-  top: 3.5px;
-  left: -38px;
-  width: 9px;
-  height: 9px;
+  top: rem(3.5px);
+  left: rem(-38px);
+  width: rem(9px);
+  height: rem(9px);
   background-color: $bg-9;
   z-index: 80;
 }
 .facts__hexagon-right {
-  left: 250px;
+  left: rem(250px);
 }
 .facts__hexagon-right--md {
-  left: 265px;
+  left: rem(265px);
 }
 .facts__hexagon-right--sm {
-  left: 276px;
+  left: rem(276px);
 }
 .facts__list {
-  @include ul-reset;
+  @extend %ul-reset;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding-bottom: 75px;
+  padding-bottom: rem(75px);
 }
 .facts__item {
   position: relative;
   width: 22.5%;
   width: 23%;
-  // margin-left: 2.5%;
   text-align: center;
   background-color: transparent;
   &:first-child {
@@ -127,11 +127,11 @@
 .facts__number {
   position: relative;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
   text-align: center;
   color: $gray-5;
   font-family: $raleway-medium;
-  @include font-size-rem(80);
+  font-size: rem(80px);
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
@@ -141,26 +141,26 @@
     position: absolute;
     top: 50%;
     left: 0;
-    left: 25px;
+    left: rem(25px);
     transform: translateY(-50%);
     transform: rotate(45deg);
     display: block;
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     background-color: #484848;
   }
   &:after {
     left: auto;
     right: 0;
-    right: 25px;
+    right: rem(25px);
   }
 }
 .facts__number-icon {
   position: relative;
   display: block;
     width: 100%;
-    height: 2px;
-    margin-bottom: 27px;
+    height: rem(2px);
+    margin-bottom: rem(27px);
     background-color: #606060;
 }
 .facts__number-img {
@@ -168,9 +168,9 @@
   transform: translateY(-50%);
   display: inline-block;
   vertical-align: top;
-  width: 18px;
-  height: 18px;
-  padding: 0 10px;
+  width: rem(18px);
+  height: rem(18px);
+  padding: 0 rem(10px);
   background-color: $bg-2;
   svg {
     fill: $accent;
@@ -179,8 +179,8 @@
 .facts__subject {
   color: $gray-3;
   font-family: $raleway-bold;
-  @include font-size-rem(14);
-  line-height: 16px;
+  font-size: rem(14px);
+  line-height: rem(16px);
   text-transform: uppercase;
 }
 .facts__bottom {
@@ -192,8 +192,8 @@
   float: left;
   color: $gray-5;
   font-family: $raleway-extrabold;
-  @include font-size-rem(16);
-  line-height: 80px;
+  font-size: rem(16px);
+  line-height: rem(80px);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -203,11 +203,11 @@
   font-size: 0;
 }
 .facts__btn {
-  padding: 5px 14px;
-  margin: 20px 0;
-  margin-left: 10px;
+  padding: rem(5px) rem(14px);
+  margin: rem(20px) 0;
+  margin-left: rem(10px);
   color: $gray-3;
-  @include font-size-rem(13);
+  font-size: rem(13px);
   font-weight: 700;
   background-color: #e4e4e4;
   &:first-child {

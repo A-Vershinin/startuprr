@@ -1,17 +1,17 @@
 .btn {
   position: relative;
   @include inline-block($valign: top);
-  padding: 4px 10px;
-  @include font-size-rem(10);
-  line-height: 29px;
+  padding: rem(4px) rem(10px);
+  font-size: rem(10px);
+  line-height: rem(29px);
   font-family: $raleway-bold;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   color: $gray-2;
   background-color: transparent;
   border: 1px solid $light-2;
-  border-radius: 4px;
+  border-radius: rem(4px);
   text-overflow: ellipsis;
   cursor: pointer;
   box-sizing: border-box;

@@ -99,8 +99,8 @@
 }
 .works__item {
   position: relative;
-  max-width: 320px;
-  max-height: 250px;
+  max-width: rem(320px);
+  max-height: rem(250px);
   background-color: $gray-2;
   border-radius: 4px;
   border: 1px solid #fff;
@@ -135,7 +135,6 @@
 }
 .works__overlay-icones {
   position: relative;
-  @extend %clearfix;
   @include inline-block($valign: top);
 }
 .works__overlay-icon-left,
