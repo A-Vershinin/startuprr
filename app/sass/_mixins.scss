@@ -88,6 +88,20 @@
   .selector {
   }
 }
+@mixin font-size-base {
+  @media screen and #{($desktop-point-widths-des)} {
+    font-size: $font-size-desktop;
+  }
+  @media screen and #{($laptop-point-widths-des)} {
+    font-size: $font-size-laptop;
+  }
+  @media screen and #{($tablet-point-widths-des)} {
+    font-size: $font-size-tablet;
+  }
+  @media screen and #{($phone-point-widths-des)} {
+    font-size: $font-size-phone;
+  }
+}
 //контейнер фикс px
 @mixin container() {
   width: $desktop-inner-width; //1170
@@ -110,21 +124,16 @@
   max-width: $desktop-max-widths; //1200
   margin: 0 auto;
   padding: 0 1.25%;
-  @include font-size-base;
-
   @media screen and #{($laptop-point-widths-des)}{
     max-width: $laptop-max-widths; //992
-    @include font-size-base;
   }
   @media screen and #{($tablet-point-widths-des)} {
     max-width: $tablet-max-widths; //768
     padding: 0 2.5%;
-    @include font-size-base;
   }
   @media screen and #{($phone-point-widths-des)} {
     max-width: $phone-max-widths; //300
     padding: 0 2%;
-    @include font-size-base;
   }
 }
 //стрелка
@@ -178,17 +187,5 @@
   }
   &:-ms-input-placeholder {
     color: $color;
-  }
-}
-@mixin font-size-base {
-  font-size: $font-size-desktop;
-  @media screen and #{($laptop-point-widths-des)} {
-    font-size: $font-size-laptop;
-  }
-  @media screen and #{($tablet-point-widths-des)} {
-    font-size:  $font-size-tablet;
-  }
-  @media screen and #{($phone-point-widths-des)} {
-    font-size:  $font-size-phone;
   }
 }

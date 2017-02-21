@@ -26,7 +26,6 @@
   <link href="bower/animate.css/animate.min.css" rel="stylesheet">
   <!-- endbuild -->
   <link href="css/style.css" rel="stylesheet">
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -1584,8 +1583,8 @@
       </section>
       <section class="footer__contacts">
         <div class="footer__map" id="google-map"></div>
-        <div class="footer__form">
-          <form class="contact-form" id="contact-form" action="mail.php" method="POST">
+        <div class="footer__form" >
+          <form class="contact-form" id="contact-form" name="form-page" enctype="multipart/form-data">
             <div class="contact-form__block">
               <label class="contact-form__label" for="name-field"></label>
               <input class="contact-form__input" type="text" name="name"

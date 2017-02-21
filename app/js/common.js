@@ -192,35 +192,43 @@ document.addEventListener("DOMContentLoaded", function() {
     // sendMessage();
     function sendMessage() {
       var form = document.querySelector("#contact-form");
-      form.addEventListener("submit", function(e) {
+      var formBtn = form.querySelector(".contact-form__btn");
+      // form.addEventListener("submit", function(e) {
+      formBtn.addEventListener("click", function(e) {
         e.preventDefault();
-        var form = $(this),
-            formData = form.serialize();
+        var formData = new FormData(document.forms.formPage);
+        // var form = $(this),
+        //     formData = form.serialize();
             // console.log(form);
         $.ajax({
-          url: "../mail.php",
+          url: "mail.php",
           type: "POST",
-          dataType: "json",
+          // dataType: "json",
           data: formData,
-          success: function(data) {
-            console.log("send success");
-            var popup = data.status ? '#success-popup' : '#error-popup';
-            $.fancybox.open([
-              {href: popup}
-            ], {
-              type: 'inline',
-              maxWidth: 300,
-              fitToView: false,
-              padding: 0,
-              afterClose: function () {
-                form.trigger('reset');
-              }
-            })
-          },
-          error: function(err) {
-            console.log(err);
-          }
-        })
+          processData: false, //для формдаты
+          contentType: false
+          // success: function(data) {
+          //   console.log("send success");
+          //   var popup = data.status ? '#success-popup' : '#error-popup';
+          //   $.fancybox.open([
+          //     {href: popup}
+          //   ], {
+          //     type: 'inline',
+          //     maxWidth: 300,
+          //     fitToView: false,
+          //     padding: 0,
+          //     afterClose: function () {
+          //       form.trigger('reset');
+          //     }
+          //   })
+          // },
+          // error: function(err) {
+          //   console.log(err);
+          // }
+        }).done(function(data) {
+          console.log(data);
+        });
+        console.log("22");
       });
       var popup = document.querySelector("#status-popup__close");
       popup.addEventListener("click", function(e) {

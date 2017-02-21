@@ -2,7 +2,6 @@
   position: relative;
   color: $gray-1;
   background-color: $bg-3;
-  height: rem(750px);
   background-image: url("../img/bg/bg-header.jpg");
   @extend %cover;
   @media #{$retina} {
@@ -20,9 +19,11 @@
   text-transform: uppercase;
   text-align: center;
   color: $gray-4;
+  transition: all .8s ease;
 }
 .header__some-text {
   font-weight: 700;
+  text-align: center;
 }
 .header__title {
   margin-bottom: rem(20px);
@@ -31,6 +32,7 @@
   font-family: $raleway-extrabold;
   font-weight: 800;
   text-align: left;
+  text-align: center;
 }
 .header__desc {
   margin-bottom: rem(50px);
@@ -81,7 +83,7 @@
   @include inline-block($valign: top);
   padding: 0 rem(20px);
   font-size: rem(26px);
-  font-weight: 800;
+  font-weight: 700;
   z-index: 50;
   b {
     color: $gray-4;
@@ -133,20 +135,128 @@
 }
 
 @media screen and #{($laptop-point-widths-des)}{
-  html {
-    font-size: 14px;
+  .header__block {
+    max-width: rem(600px);
+    padding-top: rem(170px);
+    padding-bottom: rem(170px);
   }
-
-
+  .header__title {
+    margin-bottom: rem(15px);
+    font-size: rem(52px);
+  }
+  .header__some-text {
+    font-size: rem(16px);
+  }
+  .header__desc {
+    margin-bottom: rem(35px);
+    font-size: rem(16px);
+    span {
+      font-size: rem(16px);
+    }
+  }
+  .header__info {
+    margin-bottom: rem(30px);
+    font-size: rem(20px);
+  }
+  .header__line-right {
+    &::before, &::after {
+      left: rem(480px);
+    }
+  }
+  .header__icon svg {
+    width: rem(40px);
+    height: rem(40px);
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
-  html {
-    font-size: 13px;
+  .header__block {
+    max-width: rem(470px);
+    padding-top: rem(120px);
+    padding-bottom: rem(120px);
   }
-
+  .header__some-text {
+    font-size: rem(14px);
+  }
+  .header__title {
+    margin-bottom: rem(10px);
+    font-size: rem(36px);
+  }
+  .header__desc {
+    margin-bottom: rem(25px);
+    font-size: rem(14px);
+    span {
+      font-size: rem(14px);
+    }
+  }
+  .header__info {
+    margin-bottom: rem(20px);
+    font-size: rem(16px);
+  }
+  .header__info-text {
+    padding: 0 rem(10px);
+    font-size: rem(20px);
+  }
+  .header__line-right {
+    &::before, &::after {
+      left: rem(460px);
+    }
+  }
+  .header__hexagon-right {
+    left: rem(215px);
+  }
+  .header__hexagon-right--md {
+    left: rem(227px);
+  }
+  .header__hexagon-right--sm {
+    left: rem(237px);
+  }
+  .header__line-right {
+    &::before, &::after {
+      left: rem(380px);
+    }
+  }
+  .header__icon svg {
+    width: rem(32px);
+    height: rem(32px);
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
-  html {
-    font-size: 12px;
+  .header__block {
+    max-width: rem(320px);
+    padding-top: rem(80px);
+    padding-bottom: rem(80px);
+  }
+  .header__some-text {
+    font-size: rem(12px);
+  }
+  .header__title {
+    font-size: rem(26px);
+  }
+  .header__desc {
+    margin-bottom: rem(15px);
+    font-size: rem(13px);
+    span {
+      font-size: rem(13px);
+    }
+  }
+  .header__info {
+    margin-bottom: rem(10px);
+    font-size: rem(13px);
+  }
+  .header__info-text {
+    font-size: rem(16px);
+  }
+  .header__line-left,
+  .header__line-right {
+    display: none;
+  }
+  .header__hexagon-right {
+    left: rem(175px);
+  }
+  .header__hexagon-right--md {
+    left: rem(187px);
+  }
+  .header__hexagon-right--sm {
+    left: rem(197px);
   }
 }
