@@ -14,6 +14,7 @@
 }
 .offer__top .logo {
   max-width: rem(250px);
+  flex-basis: 250px;
 }
 .offer__top .menu {
   max-width: rem(750px);
@@ -115,13 +116,9 @@
   @extend %ul-reset;
 }
 .offer__item {
-  min-height: rem(250px);
   width: 31.62%;
-  margin-left: 2.5%;
   text-align: center;
-  &:nth-child(3n-2) {
-    margin-left: 0;
-  }
+
   &:hover {
     .offer__image,
     .offer__btn {
@@ -172,4 +169,27 @@
 }
 .offer__btn {
   transition: none;
+}
+@media screen and #{($laptop-point-widths-des)}{
+
+}
+@media screen and #{($tablet-point-widths-des)}{
+  .offer__bottom {
+    padding-bottom: rem(60px);
+  }
+  .offer__list {
+    justify-content: center;
+  }
+  .offer__item {
+    width: 50%;
+    margin-bottom: rem(25px);
+  }
+}
+@media screen and #{($phone-point-widths-des)}{
+  .offer__list {
+    display: block;
+  }
+  .offer__item {
+    width: 100%;
+  }
 }

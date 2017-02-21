@@ -3,6 +3,7 @@
   display: block;
   cursor: pointer;
   padding: rem(10px);
+  align-self: flex-start;
   .search__icon svg {
     fill: $gray-3;
   }
@@ -74,6 +75,7 @@
       position: absolute;
       top: rem(335px);
       left: rem(-384px);
+      z-index: 100;
       &:hover {
         .search__form-wrap {
           top: rem(44px);

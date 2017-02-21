@@ -40,12 +40,16 @@
 }
 .menu__list {
   @extend %ul-reset;
-  font-size: 0;
+  max-width: rem(635px);
   z-index: 100;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 .menu__item {
-  @include inline-block($valign: top);
-  font-size: rem(16px);
+  align-self: center;
+  margin-bottom: rem(10px);
 }
 .menu__link {
   display: block;
@@ -55,6 +59,7 @@
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
   color: $gray-3;
   background-color: transparent;
   border-radius: 4px;
@@ -78,9 +83,10 @@
   .menu__toggle {
     display: block;
     top: rem(-25px);
-    right: rem(20px);
+    right: rem(21px);
   }
   .menu__list {
+    display: block;
     position: absolute;
     top: rem(-25px);
     left: rem(-393px);
@@ -89,10 +95,14 @@
     height: rem(400px);
     border: 1px solid $accent;
     background-color: $bg-3;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
   .menu__item {
     display: block;
+    align-self: auto;
+    margin-bottom: 0;
     &:last-child {
       .menu__link {
         border-bottom: none;
@@ -146,5 +156,13 @@
     .search {
       display: none;
     }
+  }
+}
+
+@media screen and #{($phone-point-widths-des)}{
+  .menu__list {
+    width: rem(300px);
+    top: rem(-25px);
+    left: rem(-384px);
   }
 }
