@@ -96,11 +96,11 @@
   @extend %ul-reset;
   display: flex;
   flex-flow: row wrap;
-  justify-content:  space-between;
+  justify-content:  center;
   padding-bottom: rem(70px);
 }
 .skill__item {
-  max-width: rem(170px);
+  max-width: 170px;
   width: 16.66%;
   text-align: center;
   margin-bottom: rem(20px);
@@ -145,4 +145,19 @@
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+}
+@media screen and #{($laptop-point-widths-des)}{
+  .skill__item {
+    width: 20%;
+  }
+}
+@media screen and #{($tablet-point-widths-des)}{
+  .skill__item {
+    width: 28%;
+  }
+}
+@media screen and #{($phone-point-widths-des)}{
+  .skill__item {
+    width: 35%;
+  }
 }

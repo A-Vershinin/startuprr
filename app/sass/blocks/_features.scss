@@ -7,7 +7,9 @@
   background-image: url("../img/bg/bg-features@1x.png");
   background-repeat: no-repeat;
   background-position: right 170%;
+  // background-position: right rem(265px);
   background-size: 60%;
+  transition: all .8s ease;
   @media #{$retina} {
       background-image: url("../img/bg/bg-features@2x.png");
   }
@@ -107,9 +109,11 @@
   left: rem(324px);
 }
 .features__list {
-  display: inline-block;
-  vertical-align: top;
   @extend %ul-reset;
+  max-width: rem(400px);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
 }
 .features__item {
@@ -159,4 +163,28 @@
   font-family: $raleway-medium;
   font-weight: 500;
   color: $gray-1;
+}
+.features-product {
+  height: 300px;
+  background-image: url("../img/bg/bg-features@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 170%;
+  background-position: right rem(265px);
+  background-size: 60%;
+  transition: all .8s ease;
+  @media #{$retina} {
+      background-image: url("../img/bg/bg-features@2x.png");
+  }
+}
+@media screen and #{($laptop-point-widths-des)}{
+  .features-wrap {
+    // background-position: right 170%;
+    // background-size: 72%;
+  }
+}
+@media screen and #{($tablet-point-widths-des)}{
+
+}
+@media screen and #{($phone-point-widths-des)}{
+
 }

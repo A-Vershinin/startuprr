@@ -6,7 +6,6 @@
   @extend %ul-reset;
   display: flex;
   justify-content: space-between;
-  align-content: space-between;
   flex-flow: row wrap;
   padding-top: rem(80px);
   padding-bottom: rem(100px);
@@ -14,11 +13,7 @@
 .services__item {
   position: relative;
   width: 31.62%;
-  margin-left: 2.5%;
   margin-bottom: rem(20px);
-  &:nth-child(3n-2) {
-    margin-left: 0;
-  }
   &:hover {
     .services__pict {
       background-color: $bg-2;
@@ -113,4 +108,17 @@
   svg {
     fill: $gray-5;
   }
+}
+@media screen and #{($laptop-point-widths-des)}{
+  .services__item {
+    width: 48%;
+  }
+}
+@media screen and #{($tablet-point-widths-des)}{
+  .services__item {
+    width: 100%;
+  }
+}
+@media screen and #{($phone-point-widths-des)}{
+
 }
