@@ -43,7 +43,7 @@
   max-width: rem(635px);
   z-index: 100;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 }

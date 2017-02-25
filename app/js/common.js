@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scaleColor: false,
         scaleLength: 3,
         lineWidth: 3,
-        size: 120,
+        // size: 120,
         rotate: "-90",
         animate: ({
           duration: 2000,
@@ -64,16 +64,18 @@ document.addEventListener("DOMContentLoaded", function() {
       // chart.enableAnimation();
     }
 
-    // members(); //slider
+    // members();
+    //slider
     function members() {
       var memberOwl = $(".members__list").owlCarousel({
         loop: true,
         items: 2,
-        itemElement: "members__item",
-        navContainer: "members__arrows",
+        // itemElement: "members__item",
+        // navContainer: "members__arrows",
         // stageElement:'members__list',
         margin: 30,
         nav: true,
+        navigationText : ["",""],
         dots: false,
         // autoplay: true,
         autoplaySpeed: 1700,

@@ -6,8 +6,7 @@
 .features-wrap {
   background-image: url("../img/bg/bg-features@1x.png");
   background-repeat: no-repeat;
-  background-position: right 170%;
-  // background-position: right rem(265px);
+  background-position: right bottom;
   background-size: 60%;
   transition: all .8s ease;
   @media #{$retina} {
