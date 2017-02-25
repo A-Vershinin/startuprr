@@ -136,7 +136,7 @@
 
 @media screen and #{($laptop-point-widths-des)}{
   .header__block {
-    max-width: rem(600px);
+    max-width: rem(500px);
     padding-top: rem(170px);
     padding-bottom: rem(170px);
   }
@@ -167,39 +167,26 @@
     width: rem(40px);
     height: rem(40px);
   }
+  .header__line-left,
+  .header__line-right {
+    display: none;
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
   .header__block {
-    max-width: rem(470px);
-    padding-top: rem(120px);
-    padding-bottom: rem(120px);
-  }
-  .header__some-text {
-    font-size: rem(14px);
+    max-width: rem(400px);
+    padding-top: rem(100px);
+    padding-bottom: rem(100px);
   }
   .header__title {
-    margin-bottom: rem(10px);
-    font-size: rem(36px);
+    font-size: rem(44px);
   }
   .header__desc {
-    margin-bottom: rem(25px);
-    font-size: rem(14px);
-    span {
-      font-size: rem(14px);
-    }
-  }
-  .header__info {
-    margin-bottom: rem(20px);
-    font-size: rem(16px);
+    display: none;
   }
   .header__info-text {
     padding: 0 rem(10px);
     font-size: rem(20px);
-  }
-  .header__line-right {
-    &::before, &::after {
-      left: rem(460px);
-    }
   }
   .header__hexagon-right {
     left: rem(215px);
@@ -219,44 +206,16 @@
     width: rem(32px);
     height: rem(32px);
   }
+  .header__some-text {
+    display: none;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
   .header__block {
-    max-width: rem(320px);
-    padding-top: rem(80px);
-    padding-bottom: rem(80px);
+    max-width: rem(350px);
   }
-  .header__some-text {
-    font-size: rem(12px);
-  }
-  .header__title {
-    font-size: rem(26px);
-  }
-  .header__desc {
-    margin-bottom: rem(15px);
-    font-size: rem(13px);
-    span {
-      font-size: rem(13px);
-    }
-  }
-  .header__info {
-    margin-bottom: rem(10px);
-    font-size: rem(13px);
-  }
-  .header__info-text {
-    font-size: rem(16px);
-  }
-  .header__line-left,
-  .header__line-right {
-    display: none;
-  }
+  .header__hexagon-left,
   .header__hexagon-right {
-    left: rem(175px);
-  }
-  .header__hexagon-right--md {
-    left: rem(187px);
-  }
-  .header__hexagon-right--sm {
-    left: rem(197px);
+    display: none;
   }
 }

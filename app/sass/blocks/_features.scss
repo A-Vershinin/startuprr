@@ -176,14 +176,40 @@
   }
 }
 @media screen and #{($laptop-point-widths-des)}{
-  .features-wrap {
-    // background-position: right 170%;
-    // background-size: 72%;
+  .features__list {
+    flex-flow: row wrap;
+    max-width: 100%;
+    padding-bottom: rem(200px);
+  }
+  .features__item {
+    width: 50%;
   }
 }
 @media screen and #{($tablet-point-widths-des)}{
-
+  .features-wrap {
+    background-position: center bottom;
+  }
+  .features__list {
+    padding-bottom: rem(130px);
+  }
 }
 @media screen and #{($phone-point-widths-des)}{
-
+  .features-wrap {
+    background-size: contain;
+  }
+  .features__list {
+    flex-flow: row wrap;
+    padding-bottom: rem(350px);
+    margin: 0 5%;
+  }
+  .features__item {
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .features__hexagon-right,
+  .features__hexagon-left {
+    display: none;
+  }
 }

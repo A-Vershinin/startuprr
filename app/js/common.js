@@ -44,23 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
           enabled: true
         })
       });
-      //vanillaJS
-      // var element = document.querySelectorAll('.chart');
-      // var chart = new EasyPieChart(element, {
-      //   barColor:"#3498db",
-      //   trackColor: "#f9f9f9",
-      //   scaleColor: false,
-      //   scaleLength: 3,
-      //   lineWidth: 3,
-      //   size: 120,
-      //   rotate: "-90",
-      //   animate: ({
-      //     duration: 2000,
-      //     enabled: true,
-      //     this.elem
-      //   })
-      // });
-      // chart.enableAnimation();
     }
 
     //members slider

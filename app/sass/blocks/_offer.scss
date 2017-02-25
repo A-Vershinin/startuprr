@@ -183,6 +183,11 @@
     width: 50%;
     margin-bottom: rem(25px);
   }
+  .offer__header {
+    &::before, &::after {
+      display: none;
+    }
+  }
 }
 @media screen and #{($phone-point-widths-des)}{
   .offer__list {
@@ -190,5 +195,9 @@
   }
   .offer__item {
     width: 100%;
+  }
+  .offer__hexagon-right,
+  .offer__hexagon-left {
+    display: none; 
   }
 }
