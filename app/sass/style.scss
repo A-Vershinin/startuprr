@@ -10,7 +10,9 @@
 @import "_main.scss";
 
 //Стили widgets//
-@import "widgets/fancybox.scss";
+@import "widgets/_fancybox.scss";
+@import "widgets/_owlCarousel.scss";
+@import "widgets/_slick.scss";
 
 //Стили BEM-блоков//
 // index.html

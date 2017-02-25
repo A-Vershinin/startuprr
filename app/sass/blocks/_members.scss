@@ -100,13 +100,14 @@
 }
 .members__item {
   position: relative;
-  max-width: 23%;
+  // max-width: rem(270px);
+  // max-width: 90%;
+  margin: 0 auto;
   text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   border: 1px solid #dedede;
-  border-radius: 5px;
-  &:first-child {
-    margin-left: 0;
-  }
+  box-sizing: border-box;
   &:hover {
     .members__overlay {
       opacity: 1;
@@ -123,32 +124,40 @@
 }
 .members__pict {
   position: relative;
-  max-width: rem(270px);
-  max-height: rem(270px);
-  overflow: hidden;
+  // max-width: rem(270px);
+  // max-height: rem(270px);
+  margin: 0 auto;
   background-color: $gray-2;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  & img {
+    max-width: 270px;
+    max-height: 270px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }
 .members__info {
   position: relative;
   margin: 0 1%;
   text-align: center;
+  z-index: 60;
 }
 .members__item-name {
   position: absolute;
   top: rem(-20px);
   left: 50%;
-  z-index: 30;
+  z-index: 60;
   transform: translateX(-50%);
   @include inline-block($valign: top);
-  width: rem(136px);
-  height: rem(40px);
+  padding: rem(10.5px) rem(12px);
   font-size: rem(13px);
-  line-height: rem(40px);
   font-weight: 700;
   font-family: $raleway-extrabold;
   text-transform: uppercase;
   color: $gray-5;
   background-color: $accent;
+  white-space: nowrap;
   border-radius: 4px;
 }
 .members__position {
@@ -191,8 +200,8 @@
 .members__mail-icon {
   display: inline-block;
   vertical-align: middle;
-  padding-right: rem(17px);
   padding-right: 11%;
+  padding-right: rem(17px);
 }
 .members__overlay {
   opacity: 0;
@@ -209,6 +218,7 @@
 .members__arrows {
   position: absolute;
   top: -24%;
+  top: 56%;
   width: 100%;
   z-index: 60;
   cursor: pointer;
@@ -251,5 +261,44 @@
     left: rem(11px);
     border: rem(8px) solid transparent;
     border-left: rem(12px) solid $gray-5;
+  }
+}
+@media screen and #{($desktop-point-widths-des)} {
+
+}
+@media screen and #{($laptop-point-widths-des)} {
+  .members__item-name {
+    font-size: rem(16px);
+  }
+  .members__position {
+    font-size: rem(18px);
+    line-height: rem(22px);
+  }
+  .members__mail,
+  .members__tell {
+    font-size: rem(17px);
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .members__header {
+    &::before, &::after {
+      top: rem(85px);
+    }
+    &::after {
+      top: rem(93px);
+    }
+  }
+  .members__item {
+    max-width: 90%;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .members__header {
+    &::after, &::before {
+      display: none;
+    }
+  }
+  .members__arrows {
+    display: none;
   }
 }

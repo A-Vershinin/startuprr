@@ -10,21 +10,22 @@
   position: relative;
   @extend %ul-reset;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3%;
 }
 .brands__item {
   max-width: rem(270px);
-  width: 24%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
   background-color: rgba(0, 0, 0, .1);
   border-radius: 4px;
   transition: all .4s ease;
   &:hover {
     background-color: rgba(0, 0, 0, .3);
     .brands__link {
-      filter: brightness(50);
+      filter: opacity(1);
     }
   }
 }
@@ -34,7 +35,6 @@
   width: 100%;
   height: 100%;
   text-decoration: none;
-  text-align: center;
   line-height: rem(160px);
   cursor: pointer;
   filter: contrast(0);
@@ -54,7 +54,7 @@
 }
 .brands__arrow-prev {
   position: absolute;
-  left: -1%;
+  left: -4%;
   width: rem(30px);
   height: rem(30px);
   text-indent: -9999px;
@@ -78,7 +78,7 @@
 }
 .brands__arrows-next {
   position: absolute;
-  right: -1%;
+  right: -4%;
   width: rem(30px);
   height: rem(30px);
   text-indent: -9999px;
@@ -99,4 +99,20 @@
     border: rem(8px) solid transparent;
     border-left: rem(12px) solid $blue-2;
   }
+}
+@media screen and #{($desktop-point-widths-des)} {
+  .brands__arrows {
+    display: none;
+  }
+}
+@media screen and #{($laptop-point-widths-des)} {
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .brands__item {
+    max-width: 85%;
+  }
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
 }

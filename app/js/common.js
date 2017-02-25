@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
         scaleColor: false,
         scaleLength: 3,
         lineWidth: 3,
-        // size: 120,
         rotate: "-90",
         animate: ({
           duration: 2000,
@@ -64,100 +63,127 @@ document.addEventListener("DOMContentLoaded", function() {
       // chart.enableAnimation();
     }
 
-    // members();
-    //slider
+    //members slider
+    members();
     function members() {
-      var memberOwl = $(".members__list").owlCarousel({
+      var carousel = $('.members__list').owlCarousel({
+        items: 4,
         loop: true,
-        items: 2,
-        // itemElement: "members__item",
-        // navContainer: "members__arrows",
-        // stageElement:'members__list',
         margin: 30,
         nav: true,
-        navigationText : ["",""],
+        navigation: true,
         dots: false,
-        // autoplay: true,
-        autoplaySpeed: 1700,
-        navSpeed: 1700,
-        responsive: {
-          // 0: {
-          //   items: 1,
-          //   nav: true
-          // }
-          // 750:{
-          //   items:2
-          // },
-          // 1200:{
-          //   items:3
-          // }
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2500,
+        autoplayTimeout: 7000,
+        navSpeed: 1000,
+        smartSpeed: 1000,
+        navigationText : ["",""],
+        navContainerClass: ".members__arrows",
+        responsiveClass: true,
+        navText: "",
+        responsive:{
+          0: {
+            items: 1,
+            nav: false
+          },
+          650: {
+            items: 2
+          },
+          992: {
+            items: 3
+          },
+          1200: {
+            items: 4,
+            nav: true
+          }
         }
       });
-
-      $('.members__arrows-right').on('click', function (e) {
+      $('.members__arrows-left').click(function(e) {
         e.preventDefault();
-        memberOwl.trigger('next.owl.carousel');
+        carousel.trigger('prev.owl.carousel');
       });
 
-      $('.members__arrows-left').on('click', function (e) {
+      $('.members__arrows-right').click(function(e) {
         e.preventDefault();
-        memberOwl.trigger('prev.owl.carousel');
+        carousel.trigger('next.owl.carousel');
       });
     }
 
-    // feedback slider;
+    //feedback slider;
     feedback();
     function feedback() {
       var feedbackSlider = $(".feedback__list").slick({
         infinite: true,
+        dots: true,
+        adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 3000,
+        speed: 2000,
         arrows: true,
         autoplay: true,
-        autoplay: 3000,
-        autoplaySpeed: 7000,
-        adaptiveHeight: true,
+        autoplaySpeed: 10000,
         lazyLoad: "progressive",
-        appendArrows: ".feedback__arrows",
-        prevArrow: "feedback__arrow-prev",
-        // prevArrow: '<button class="feedback__arrow-prev"><button>',
-        nextArrow: "feedback__arrow-next"
-        // nextArrow: '<button class="feedback__arrow-next"><button>'
+        prevArrow: ".feedback__block .feedback__arrow-prev",
+        nextArrow: ".feedback__block .feedback__arrow-next"
       });
-
-      // $(".feedback__arrow-prev").on("click", function(e) {
-      // $(".feedback__arrow-prev").slick("slickNext()");
-
-        // feedbackSlider.slickNext;
-
-      // $(".feedback__arrow-next").on("click", function(e) {
-      //   e.preventDefault();
-      //   console.log("next");
-      //   feedbackSlider.slickPrev();
-      // });
     }
 
-    // brands();
+    //brands slider
+    brands();
     function brands() {
-      var brandsOwl = $(".brands__list").owlCarousel({
-        loop: true,
+      var carousel = $('.brands__list').owlCarousel({
         items: 4,
-        itemElement: "brands__item",
+        loop: true,
+        margin: 30,
         nav: true,
-        margin: 30
+        navigation: true,
+        dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2500,
+        autoplayTimeout: 7000,
+        navSpeed: 1500,
+        smartSpeed: 1500,
+        navigationText : ["",""],
+        navContainerClass: ".brands__arrows",
+        responsiveClass: true,
+        navText: "",
+        responsive:{
+          0: {
+            items: 1,
+            nav: false
+          },
+          650: {
+            items: 2,
+            nav: false
+          },
+          768: {
+            items: 3,
+            nav: false
+          },
+          992: {
+            items: 4,
+            nav: false
+          },
+          1200: {
+            items: 4,
+            nav: true
+          }
+        }
+      });
+      $('.brands__arrow-prev').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('prev.owl.carousel');
       });
 
-      $('.brands__arrows-next').on('click', function (e) {
+      $('.brands__arrows-next').click(function(e) {
         e.preventDefault();
-        memberOwl.trigger('next.owl.carousel');
-      });
-
-      $('.brands__arrow-prev').on('click', function (e) {
-        e.preventDefault();
-        memberOwl.trigger('prev.owl.carousel');
+        carousel.trigger('next.owl.carousel');
       });
     }
+
     //page map
     pageMap();
     function pageMap() {
