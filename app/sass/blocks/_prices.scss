@@ -90,8 +90,9 @@
 }
 .prices__list {
   @extend %ul-reset;
+  @extend %clearfix;
   display: flex;
-  flex-grow: row nowrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding-bottom: rem(80px);
@@ -236,5 +237,69 @@
   border: none;
   &:hover {
     background-color: $accent-active;
+  }
+}
+.prices__btn-card {
+  display: none;
+  margin-top: rem(50px);
+  margin-bottom: rem(107px);
+  width: 100%;
+  height: rem(40px);
+  background-color: $accent;
+  color: #e4e4e4;
+  font-family: $raleway-extrabold;
+  font-size: rem(13px);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  &:hover {
+    background-color: $accent-active;
+  }
+}
+@media screen and #{($desktop-point-widths-des)} {
+
+}
+@media screen and #{($laptop-point-widths-des)} {
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .prices__header {
+    &::before, &::after {
+      display: none;
+    }
+  }
+  .prices__list {
+    display: block;
+    margin-left: -10%;
+    padding-bottom: 0;
+  }
+  .prices__item {
+    float: left;
+    width: 40%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    &:nth-child(n+3) {
+      display: none;
+    }
+  }
+  .prices__btn-card {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .prices__list {
+    margin-left: 0;
+  }
+  .prices__item {
+    float: none;
+    width: 70%;
+    margin-left: 0;
+    margin: 0 auto 40px;
+    &:nth-child(n+2) {
+      display: none;
+    }
   }
 }
