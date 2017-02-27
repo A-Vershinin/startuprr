@@ -261,7 +261,17 @@
 
 }
 @media screen and #{($laptop-point-widths-des)} {
-
+  .prices__item {
+    width: 30%;
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+  .prices__btn-card {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
   .prices__header {
@@ -282,11 +292,6 @@
     &:nth-child(n+3) {
       display: none;
     }
-  }
-  .prices__btn-card {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 40px;
   }
 }
 @media screen and #{($phone-point-widths-des)} {

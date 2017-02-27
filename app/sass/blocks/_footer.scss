@@ -11,10 +11,11 @@
 }
 .footer__top-wrap {
   @extend %clearfix;
-  height: rem(170px);
+  padding-top: rem(10px);
+  padding-bottom: rem(65px);
   background-image: url("../img/bg/bg-pricses2@1x.png");
   background-repeat: no-repeat;
-  background-position: left rem(10px);
+  background-position: left bottom;
   @media #{$retina} {
     background-image: url("../img/bg/bg-pricses2@2x.png");
   }
@@ -22,14 +23,14 @@
 .footer__top-text {
   display: block;
   float: left;
-  max-width: 75%;
-  padding-top: rem(65px);
-  margin-left: rem(135px);
+  width: 55%;
+  padding-top: rem(60px);
+  padding-left: rem(135px);
   color: $gray-4;
   font-family: $raleway-bold;
   font-size: rem(26px);
   font-weight: 700;
-  line-height: rem(20px);
+  line-height: rem(40px);
   span {
     display: inline-block;
     vertical-align: top;
@@ -38,6 +39,7 @@
 }
 .footer__top-button {
   float: right;
+  margin-top: rem(60px);
 }
 .footer__top-icon {
   display: inline-block;
@@ -46,9 +48,6 @@
   svg {
     fill: $accent;
   }
-}
-.footer__top-button {
-  margin-top: rem(60px);
 }
 .footer__top-btn {
   vertical-align: middle;
@@ -100,7 +99,6 @@
   transform: translate(0, -50%);
   z-index: 30;
   border-radius: 4px;
-  // min-height: 500px;
 }
 
 .footer__copyright {
@@ -112,4 +110,50 @@
   text-align: center;
   color: $gray-5;
   background-color: $bg-2;
+}
+@media screen and #{($desktop-point-widths-des)} {
+
+}
+@media screen and #{($laptop-point-widths-des)} {
+  .footer__top-wrap {
+    padding-top: 10px;
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .footer__top-wrap {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .footer__top-text {
+    float: none;
+    width: 75%;
+    padding-left: 25%;
+    padding-right: 0;
+  }
+  .footer__top-button {
+    float: none;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .footer__form {
+    display: block;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 10px 0;
+    background-color: $accent;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .footer__top-text {
+    padding-top: rem(40px);
+  }
+  .footer__top-wrap {
+    padding-top: 0;
+  }
+  .footer__top-text {
+    width: 65%;
+    padding-left: 35%;
+  }
 }

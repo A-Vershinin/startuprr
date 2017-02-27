@@ -238,7 +238,7 @@
   .works__item {
     max-width: 49%;
     max-height: inherit;
-    &:nth-child(n+2) {
+    &:nth-child(n+3) {
       display: none;
     }
   }

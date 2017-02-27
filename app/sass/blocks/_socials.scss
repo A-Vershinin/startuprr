@@ -61,3 +61,30 @@
     }
   }
 }
+@media screen and #{($laptop-point-widths-des)} {
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .footer__socials-wrap {
+    padding-bottom: 20px;
+  }
+  .socials {
+    &--footer {
+      width: 80%;
+      justify-content: center;
+    }
+  }
+  .socials__item {
+    &--footer {
+      margin-right: rem(30px);
+      margin-bottom: rem(25px);
+    }
+  }
+  .socials__link--footer {
+    width: rem(55px);
+    height: rem(55px);
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}
