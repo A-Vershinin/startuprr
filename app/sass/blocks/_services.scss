@@ -109,16 +109,52 @@
     fill: $gray-5;
   }
 }
+
+.services__btn {
+  display: none;
+  margin-top: rem(40px);
+  margin-bottom: rem(40px);
+  width: 100%;
+  height: rem(40px);
+  background-color: $accent;
+  color: #e4e4e4;
+  font-family: $raleway-extrabold;
+  font-size: rem(13px);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  &:hover {
+    background-color: $accent-active;
+  }
+}
 @media screen and #{($laptop-point-widths-des)}{
   .services__item {
     width: 48%;
   }
 }
 @media screen and #{($tablet-point-widths-des)}{
+  .services__list {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
   .services__item {
-    width: 100%;
+    &:nth-child(n+5) {
+      display: none;
+    }
+  }
+  .services__btn {
+    display: block;
+    margin-top: rem(10px);
+    margin-bottom: rem(80px);
   }
 }
 @media screen and #{($phone-point-widths-des)}{
-
+  .services__item {
+    width: 100%;
+    margin-right: 0;
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
 }

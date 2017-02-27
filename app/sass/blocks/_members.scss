@@ -277,24 +277,19 @@
 }
 @media screen and #{($tablet-point-widths-des)} {
   .members__header {
-    &::before, &::after {
-      top: rem(85px);
-    }
-    &::after {
-      top: rem(93px);
+    &::after, &::before {
+      display: none;
     }
   }
   .members__item {
     max-width: 90%;
   }
-}
-@media screen and #{($phone-point-widths-des)} {
-  .members__header {
-    &::after, &::before {
-      display: none;
-    }
-  }
   .members__arrows {
     display: none;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .members {
+    margin-bottom: rem(50px);
   }
 }

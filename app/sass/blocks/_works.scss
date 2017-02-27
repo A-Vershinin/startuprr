@@ -214,6 +214,9 @@
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 5px;
+  &:hover {
+    background-color: $accent-active;
+  }
 }
 @media screen and #{($laptop-point-widths-des)} {
   .works__list {
@@ -222,6 +225,9 @@
   .works__item {
     display: block;
     max-width: 30%;
+    &:nth-child(n+4) {
+      display: none;
+    }
   }
   .works__pict {
     width: 100%;
@@ -232,6 +238,9 @@
   .works__item {
     max-width: 49%;
     max-height: inherit;
+    &:nth-child(n+2) {
+      display: none;
+    }
   }
   .works__header {
     &::before, &::after {

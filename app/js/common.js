@@ -100,7 +100,9 @@ document.addEventListener("DOMContentLoaded", function() {
       var feedbackSlider = $(".feedback__list").slick({
         infinite: true,
         dots: true,
+        centerMode: true,
         adaptiveHeight: true,
+        centerPadding: '0px',
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 2000,
